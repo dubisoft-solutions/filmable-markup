@@ -1,0 +1,27 @@
+p {
+    margin-bottom: 0;
+    line-height: 1.25;
+}
+
+.font-family-title {
+    font-family: $font-family-title;
+}
+
+.font-family-second {
+    font-family: $font-family-second;
+}
+
+@include media-breakpoint-down(md) {
+    h1 {
+        font-size: 1.75rem!important;
+    }
+    h2 {
+        font-size: 1.25rem!important;
+    }
+    h3 {
+        font-size: 1.625rem!important;
+    }
+    p {
+        font-size: .875rem;
+    }
+}

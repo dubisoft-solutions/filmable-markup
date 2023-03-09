@@ -1,0 +1,67 @@
+.btn {
+    --bs-btn-color: #{$white};
+    &.btn-sm {
+        --bs-btn-font-size: 1.313rem;
+        --bs-btn-padding-x: 2rem;
+        --bs-btn-padding-y: .75rem;
+        --bs-btn-border-radius: 2.875rem;
+        @include media-breakpoint-down(md) {
+            --bs-btn-font-size: 1rem;
+            --bs-btn-padding-x: 1.25rem;
+            --bs-btn-padding-y: .625rem;
+            --bs-btn-border-radius: 2.25rem;
+        }
+    }
+    &.btn-lg {
+        --bs-btn-font-size: 1.5rem;
+        --bs-btn-padding-x: 2rem;
+        --bs-btn-padding-y: .5rem;
+        --bs-btn-border-radius: .75rem;
+        @include media-breakpoint-down(md) {
+            --bs-btn-font-size: 1.063rem;
+            --bs-btn-padding-x: 1.25rem;
+            --bs-btn-padding-y: 1rem;
+            --bs-btn-border-radius: .25rem;
+        }
+    }
+}
+
+.btn-danger {
+    --bs-btn-hover-color: #{$white};
+    --bs-btn-font-size: 2.813rem;
+    --bs-btn-padding-x: 1.5rem;
+    --bs-btn-padding-y: 1.75rem;
+    --bs-btn-border-radius: #{$border-radius-lg};
+    background: $gradient!important;
+    border: none;
+    &:focus,
+    &:hover,
+    &:active {
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 1px 1px 7px 3px rgba(255, 51, 57, 0.44), inset 0px 4.32166px 21.6083px rgba(0, 0, 0, 0.14);
+        color: $white;
+        background-color: $gradient;
+    }
+    @include media-breakpoint-down(md) {
+        --bs-btn-font-size: 1.25rem;
+        --bs-btn-border-radius: #{$border-radius-md};
+        --bs-btn-padding-x: 1.5rem;
+        --bs-btn-padding-y: .75rem;
+    }
+}
+
+.btn-secondary {
+    background: linear-gradient(247.66deg, #959595 20.97%, #A29A9A 112.08%);
+    border: none;
+}
+
+.btn-link {
+    font-size: 1.5rem;
+    --bs-link-color: #{$gray-11};
+    --bs-btn-hover-color: #{$yellow-236};
+    @include media-breakpoint-down(md) {
+        font-size: .875rem;
+    }
+    @include media-breakpoint-up(xxxxl) {
+        font-size: 1.25rem;
+    }
+}

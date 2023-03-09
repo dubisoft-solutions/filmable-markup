@@ -1,0 +1,51 @@
+.fw-medium {
+    font-weight: $font-weight-medium;
+}
+
+a {
+    text-decoration: underline;
+}
+
+textarea {
+    resize: none;
+}
+
+.text-gradient {
+    background: linear-gradient(359.45deg, #C73F3B 0.32%, #F85A52 102.56%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+.bg-gradient-gray {
+    background: $gradient-gray;
+}
+
+.text-gray {
+    color: $gray-87;
+}
+
+.text-body {
+    color: $yellow-236!important;
+}
+
+.text-danger {
+    color: $red-253!important;
+}
+
+.bg-secondary {
+    background-color: $gray-123!important;
+}
+
+.fs-3 {
+    @include media-breakpoint-down(md) {
+        font-size: .875rem!important;
+    }
+}
+
+.fs-5 {
+    @include media-breakpoint-down(md) {
+        font-size: .75!important;
+    }
+}

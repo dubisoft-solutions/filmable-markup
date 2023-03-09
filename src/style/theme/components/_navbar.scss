@@ -1,0 +1,14 @@
+.navbar {
+    @include media-breakpoint-down(md) {
+        padding: .125rem 0;
+    }
+    .navbar-brand-img {
+        width: 8.375rem;
+        @include media-breakpoint-down(md) {
+            width: 5.625rem;
+        }
+        @include media-breakpoint-up(xxxxl) {
+            font-size: 10rem;
+        }
+    }
+}

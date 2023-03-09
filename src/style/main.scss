@@ -1,0 +1,136 @@
+@import 'theme/theme';
+.index {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #1A1A1A;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    &.landing {
+        .landing-title {
+            background: linear-gradient(180deg, #FFFFEC 0%, rgba(240, 240, 240, 0) 202.5%, rgba(240, 240, 240, 0) 202.5%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            &.fs-1 {
+                font-size: 2.5rem;
+                @include media-breakpoint-down(md) {
+                    font-size: 1.25rem!important;
+                }
+            }
+        }
+        .fs-2 {
+            @include media-breakpoint-down(md) {
+                font-size: .875rem!important;
+            }
+        }
+        .fs-3 {
+            @include media-breakpoint-down(md) {
+                font-size: .875rem!important;
+            }
+        }
+        .btn-block {
+            top: -3.75rem;
+        }
+    }
+}
+
+.hero {
+    min-height: calc(82vh - 0px);
+}
+
+.object-fit-img {
+    object-fit: cover;
+}
+
+.img-style {
+    height: 32.875rem;
+    @include media-breakpoint-down(md) {
+        height: 18.75rem;
+    }
+}
+
+.text-copyright {
+    color: $gray-154;
+    font-size: .813rem;
+    @include media-breakpoint-down(md) {
+        font-size: .625rem;
+    }
+}
+
+.confirmation-title {
+    font-size: 1.25rem;
+    @include media-breakpoint-down(md) {
+        font-size: .875rem;
+    }
+}
+
+.thank-you {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #060606;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    main {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        .main-bg {
+            position: relative;
+            &::before {
+                width: 100%;
+                height: 100%;
+                content: "";
+                display: block;
+                position: absolute;
+                top: 0;
+                background-image: url("../img/thank-you-bg.png");
+                background-position: top center;
+                background-repeat: no-repeat;
+                z-index: -1;
+                background-size: contain;
+                @include media-breakpoint-up(sm) {
+                    background-image: url("../img/thank-you-bg-desktop.png");
+                    background-size: cover;
+                }
+            }
+        }
+        .check-circle {
+            width: 7.938rem;
+            height: 7.938rem;
+            background-color: $yellow-236;
+            .icon-style {
+                font-size: 3.125rem;
+                @include media-breakpoint-down(md) {
+                    font-size: 2.25rem;
+                }
+            }
+            @include media-breakpoint-down(md) {
+                width: 5rem;
+                height: 5rem;
+            }
+        }
+    }
+    .text-block {
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
+        border-radius: 41px;
+        padding: 3.625rem 5rem 1.5rem 5rem;
+        @include media-breakpoint-down(md) {
+            background: transparent;
+            padding: 0;
+        }
+    }
+}
+
+.footer {
+    background: $black-7;
+    padding: 1rem 0 .625rem 0;
+    @include media-breakpoint-down(md) {
+        padding: 2.5rem 0 1.5rem 0;
+        background: transparent;
+    }
+    .list-inline {
+        .list-inline-item {
+            .btn-link {
+                font-size: 1.125rem;
+                --bs-link-color: #{$gray-11};
+                --bs-link-hover-color: #{$yellow-236};
+                @include media-breakpoint-down(md) {
+                    font-size: .813rem;
+                }
+            }
+        }
+    }
+}

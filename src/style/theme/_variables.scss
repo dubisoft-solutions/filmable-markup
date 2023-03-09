@@ -1,0 +1,91 @@
+// scss-docs-start font-variables
+// stylelint-disable value-keyword-case
+$font-family-sans-serif: "Inter" !default;
+$font-family-second: "Roboto" !default;
+$font-family-title: "Intro" !default;
+$white: #FFFFFF;
+$light: #F8F7FF;
+$yellow-236: #FFFFEC;
+$yellow-200: #FFFFEF;
+$yellow-226: #F1F1E2;
+$green: #29D884;
+$pink-62: #FF3E3E;
+$red-244: #F45733;
+$red-242: #F25531;
+$red-243: #F35632;
+$red-253: #FD5732;
+$gray-217: #D9D9D9;
+$gray-219: #DBDBDB;
+$gray-201: #C9C9C9;
+$gray-163: #a3a3a3;
+$gray-154: #9A9A9A;
+$gray-158: #9E9E9E;
+$gray-129: #818181;
+$gray-123: #797C7B;
+$gray-11: #6F6F6F;
+$gray-87: #606060;
+$gray-90: #5B5A5A;
+$gray-70: #464646;
+$black-43: #2B2B2B;
+$black-33: #212121;
+$black-25: #090919;
+$black-20: #141414;
+$black-7: #070707;
+$black-14: #0C030E;
+$gradient: linear-gradient(359.45deg, #C73F3B 0.32%, #F85A52 102.56%);
+$gradient-gray: linear-gradient(180deg, #797C7B 0%, #797C7B 100%);
+// font sizes
+$font-size-base: 1.25rem;
+$line-height-base: 1;
+$line-height-sm: 1.5;
+$h1-font-size: 1.75rem;
+$h2-font-size: 3.375rem;
+$h3-font-size: 2.125rem;
+$h4-font-size: 1.375rem;
+$h5-font-size: 1.25rem;
+$headings-line-height: 1;
+$headings-font-weight: 700;
+$font-weight-medium: 500;
+$font-sizes: ( 1: 2.5rem, 2: 2.25rem, 3: 1.5rem, 4: 1.125rem, 5: .938rem);
+$spacer: 1rem;
+$spacers: ( 0: 0, 1: $spacer * .25, 2: $spacer * .5, 3: $spacer, 4: $spacer * 1.5, 5: $spacer * 3, 6: $spacer * 10);
+// break points
+$grid-breakpoints: (xxc:0, xs: 390px, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1440px, xxxl: 1548px, xxxxl: 1920px, xxxxxl: 2560px);
+// containers
+$container-max-widths: (xc: 355px, sm: 540px, md: 720px, lg: 960px, xl: 1140px, xxl: 1267px, xxxl: 1375px, xxxxl: 1747px, xxxxxl: 2387px);
+// box-shadow
+$box-shadow: 0px 4.32166px 4.32166px rgba(0, 0, 0, 0.25),
+inset 0px 4.32166px 21.6083px rgba(0, 0, 0, 0.14) !default;
+// border
+$border-radius-md: 2.75rem!default;
+$border-radius-lg: 6.375rem!default;
+// buttons
+$btn-font-weight: 500;
+$btn-color: $white!default;
+// dropdown
+$dropdown-padding-x: .625rem;
+$dropdown-padding-y: .375rem;
+$dropdown-item-padding-y: .5rem;
+$dropdown-item-padding-x: .75rem;
+$dropdown-border-radius: $border-radius-md;
+$dropdown-font-size: .75rem;
+$dropdown-bg: transparent!default;
+$dropdown-color: $white!default;
+$dropdown-link-color: $white;
+// form-control
+$input-font-size: .875rem;
+$input-line-height: 1;
+$input-font-weight: 500;
+$input-color: $gray-90;
+$input-bg: $light;
+$input-border-color: $light;
+$input-padding-y: .685rem;
+$input-padding-x: .875rem;
+$input-group-addon-color: $light;
+$input-group-addon-border-color: transparent;
+$input-group-addon-bg: transparent;
+$form-feedback-invalid-color: $red-253;
+$form-feedback-icon-invalid-color: $red-253;
+$form-feedback-font-size: .875rem;
+$input-box-shadow: none;
+$input-focus-box-shadow: none;
