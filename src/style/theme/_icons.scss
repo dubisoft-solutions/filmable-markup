@@ -26,9 +26,12 @@ $font-icons-family-name: "IconsFont";
 }
 
 $icon-name-check: "\E001"; 
-$icon-name-key: "\E002"; 
-$icon-name-next: "\E003"; 
-$icon-name-play: "\E004"; 
+$icon-name-close: "\E002"; 
+$icon-name-key: "\E003"; 
+$icon-name-menu: "\E004"; 
+$icon-name-next: "\E005"; 
+$icon-name-play-v2: "\E006"; 
+$icon-name-play: "\E007"; 
 
 
 @function icon-char($filename) {
@@ -37,14 +40,23 @@ $icon-name-play: "\E004";
 	@if $filename == check {
 		$char: "\E001";
 	}
-	@if $filename == key {
+	@if $filename == close {
 		$char: "\E002";
 	}
-	@if $filename == next {
+	@if $filename == key {
 		$char: "\E003";
 	}
-	@if $filename == play {
+	@if $filename == menu {
 		$char: "\E004";
+	}
+	@if $filename == next {
+		$char: "\E005";
+	}
+	@if $filename == play-v2 {
+		$char: "\E006";
+	}
+	@if $filename == play {
+		$char: "\E007";
 	}
 
 	@return $char;
@@ -64,11 +76,20 @@ $icon-name-play: "\E004";
 .icon-check {
 	@include icon(check);
 }
+.icon-close {
+	@include icon(close);
+}
 .icon-key {
 	@include icon(key);
 }
+.icon-menu {
+	@include icon(menu);
+}
 .icon-next {
 	@include icon(next);
+}
+.icon-play-v2 {
+	@include icon(play-v2);
 }
 .icon-play {
 	@include icon(play);

@@ -11,7 +11,7 @@ textarea {
 }
 
 .text-gradient {
-    background: linear-gradient(359.45deg, #C73F3B 0.32%, #F85A52 102.56%);
+    background: $gradient-red;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;

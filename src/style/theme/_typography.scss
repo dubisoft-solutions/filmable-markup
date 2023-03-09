@@ -1,4 +1,5 @@
 p {
+    color: $yellow-226;
     margin-bottom: 0;
     line-height: 1.25;
 }
@@ -20,6 +21,9 @@ p {
     }
     h3 {
         font-size: 1.625rem!important;
+    }
+    h4 {
+        font-size: 1.375rem!important;
     }
     p {
         font-size: .875rem;

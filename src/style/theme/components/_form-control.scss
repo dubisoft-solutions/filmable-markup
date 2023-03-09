@@ -11,6 +11,10 @@
     }
 }
 
+.form-label {
+    font-size: 1.063rem;
+}
+
 .input-group-text {
     font-weight: 500;
     font-size: .75rem;
@@ -31,31 +35,28 @@
     }
 }
 
-.contact-form {
-    .form-control {
-        font-size: .75rem;
-        color: $gray-123;
-        background-color: $white!important;
-        border-radius: 0!important;
-        border: none;
-        padding: 1rem 1.25rem;
-        &::placeholder {
-            color: $gray-123;
-            font-size: .75rem;
-            @include media-breakpoint-down(md) {
-                font-size: .625rem;
-            }
-        }
-        &:focus {
-            box-shadow: none;
-        }
-        @include media-breakpoint-down(md) {
-            font-size: .625rem;
-            padding: .47rem .75rem;
-        }
-    }
-    .invalid-feedback {
-        padding-left: 0;
+.invalid-tooltip {
+    background-color: $red-253;
+    opacity: .95;
+    font-size: .625rem;
+    color: $white;
+    border-radius: .188rem;
+    position: relative;
+}
+
+.btn-close {
+    background: none!important;
+    padding: 0;
+    opacity: 1;
+    position: absolute;
+    top: -6px;
+    right: 6px;
+    &::before {
+        @include icon-styles;
+        content: icon-char(close);
+        display: block;
+        font-size: .875rem;
+        color: $white;
     }
 }
 
@@ -73,7 +74,6 @@
 
 .form-control.is-invalid,
 .was-validated .form-control:invalid {
-    border-color: transparent;
     background-image: none;
 }
 

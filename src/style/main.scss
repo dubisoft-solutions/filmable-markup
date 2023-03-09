@@ -32,6 +32,10 @@
 
 .hero {
     min-height: calc(82vh - 0px);
+    margin-top: 4.25rem;
+    @include media-breakpoint-down(md) {
+        margin-top: 2.938rem!important;
+    }
 }
 
 .object-fit-img {
@@ -56,6 +60,16 @@
 .confirmation-title {
     font-size: 1.25rem;
     @include media-breakpoint-down(md) {
+        font-size: .875rem;
+    }
+}
+
+.play-btn {
+    width: 3rem;
+    height: 3rem;
+    background-color: $gray-70;
+    border: 2px solid $yellow-236;
+    .icon-style {
         font-size: .875rem;
     }
 }
