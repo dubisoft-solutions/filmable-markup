@@ -32,6 +32,7 @@ $icon-name-menu: "\E004";
 $icon-name-next: "\E005"; 
 $icon-name-play-v2: "\E006"; 
 $icon-name-play: "\E007"; 
+$icon-name-prev: "\E008"; 
 
 
 @function icon-char($filename) {
@@ -57,6 +58,9 @@ $icon-name-play: "\E007";
 	}
 	@if $filename == play {
 		$char: "\E007";
+	}
+	@if $filename == prev {
+		$char: "\E008";
 	}
 
 	@return $char;
@@ -93,4 +97,7 @@ $icon-name-play: "\E007";
 }
 .icon-play {
 	@include icon(play);
+}
+.icon-prev {
+	@include icon(prev);
 }

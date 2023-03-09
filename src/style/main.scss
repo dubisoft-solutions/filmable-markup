@@ -38,6 +38,14 @@
     }
 }
 
+.category {
+    min-height: calc(82vh - 0px);
+    margin: 8.875rem 0 6.688rem 0;
+    @include media-breakpoint-down(md) {
+        margin: 5.875rem 0 5.25rem 0;
+    }
+}
+
 .object-fit-img {
     object-fit: cover;
 }
@@ -46,6 +54,15 @@
     height: 32.875rem;
     @include media-breakpoint-down(md) {
         height: 18.75rem;
+    }
+}
+
+.img-size {
+    width: 12rem;
+    height: 15.625rem;
+    @include media-breakpoint-down(md) {
+        width: 6.25rem;
+        height: 8.125rem;
     }
 }
 
