@@ -80,3 +80,127 @@ function genericFormsValidation(event, form) {
 
     form.classList.add('was-validated')
 }
+
+/**
+ * carousel setup
+ */
+$(function() {
+    if ($('.owl-carousel').length > 0) {
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            margin: 25,
+            responsiveClass: true,
+            autoplay: true,
+            autoplayTimeout: 3000,
+            nav: false,
+            dots: false,
+
+            responsive: {
+                0: {
+                    items: 1,
+                    stagePadding: 80
+                },
+                720: {
+                    items: 3,
+                    stagePadding: 60
+                },
+                1050: {
+                    items: 4
+                },
+                1200: {
+                    items: 5
+                }
+            }
+        })
+    }
+});
+
+/**
+ * File picker
+ */
+$(function() {
+    $('#attachment-file-input').on('change', function(e) {
+        $('.attachment-file-name').text(this.files[0].name)
+    });
+
+    $('.chose-attachment-file-btn').on('click', function(e) {
+        e.preventDefault();
+        $("#attachment-file-input").click();
+    })
+})
+
+/**
+ * Navbar toggler
+ */
+$(function() {
+    var menuToggler = document.querySelector('.navbar .dropdown-toggle');
+    var navbar = document.querySelector('.navbar');
+    if (!navbar || !menuToggler) return;
+
+    menuToggler.addEventListener('shown.bs.dropdown', function() {
+        navbar.classList.add('menu-visible')
+    });
+
+    menuToggler.addEventListener('hidden.bs.dropdown', function() {
+        navbar.classList.remove('menu-visible')
+    });
+});
+
+/*
+ DO NOT USER THIS CODE IN THE REAL PROJECT
+ It handles ?rtl=true query param for testing rtl.
+*/
+$(function() {
+    const urlSearchParams = new URLSearchParams(window.location.search);
+    const params = Object.fromEntries(urlSearchParams.entries());
+    if (params.rtl == 'true') {
+        $('html').attr('lang', 'ar');
+        $('html').attr('dir', 'rtl');
+
+        $('link[rel=stylesheet]').each(function() {
+            console.log(this);
+            this.disabled = true;
+        });
+
+        $('head').append('<link rel="stylesheet" href="css/bootstrap.rtl.min.css">');
+        $('head').append('<link rel="stylesheet" href="css/style.css"></link>');
+    }
+});
+
+/**
+ * Search controller
+ */
+$(function() {
+    var searchForm = $(".search-form");
+    var url = searchForm.attr('data-url');
+    if (!searchForm.length || !url) {
+        return;
+    }
+
+    searchForm.find("#query").autocomplete({
+        serviceUrl: url,
+        paramName: 'q',
+        type: "GET",
+        onSelect: function(keyword) {
+            window.location.href = `search-result.html?q=${keyword.value}`;
+        },
+        transformResult: function(response) {
+            console.log(response);
+            response = JSON.parse(response);
+            return {
+                suggestions: response
+            }
+        },
+        minChars: 2,
+        showNoSuggestionNotice: true
+    });
+
+    $(".search-form").on("submit", function(a) {
+        a.preventDefault();
+        var query = $(this).find('#query').val().trim()
+        if (query) {
+            window.location.href = `search-result.html?q=${query}`;
+        }
+        return false;
+    })
+});

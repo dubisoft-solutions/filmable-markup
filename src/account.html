@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="lv">
+//= html_partials/head.html
+
+<body class="index landing position-relative">
+    <main>
+        <!-- Header -->
+        //= html_partials/header.html
+        <!-- Main section -->
+        <section class="category">
+            <div class="container">
+                <div class="row mb-lg-5 mb-4">
+                    <div class="col-lg-6 col-12">
+                        <a href="index.html">
+                            <h5 class="mb-0 d-flex">
+                                <icon class="icon icon-prev pe-3 d-grid"></icon>My Account
+                            </h5>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center mb-5">
+                    <div class="col-lg-6 col-12">
+                        <a href="faq.html">
+                            <div class="card bg-dark mb-lg-3 mb-4">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <p class="fw-medium fs-7">FAQ</p>
+                                    <icon class="icon icon-arrow-right text-body fs-4"></icon>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="contact-us.html">
+                            <div class="card bg-dark mb-lg-3 mb-4">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <p class="fw-medium fs-7">Contact Us</p>
+                                    <icon class="icon icon-arrow-right text-body fs-4"></icon>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="terms.html">
+                            <div class="card bg-dark">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <p class="fw-medium fs-7">Terms and Conditions</p>
+                                    <icon class="icon icon-arrow-right text-body fs-4"></icon>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-4 col-12">
+                        <h5 class="fs-7 fw-bold mb-4 text-start">My subscription</h5>
+                        <div class="card bg-dark mb-4">
+                            <p class="fw-medium">You are part of Filmable since <span class="text-danger">xx.xx.xx</span></p>
+                        </div>
+
+                        <div class="text-center">
+                            <a class="btn-link text-danger" data-bs-toggle="modal" data-bs-target="#liveSubscription">Unsubscribe from Filmable</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal -->
+        <div class="modal fade" id="liveSubscription" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="liveSubscriptionLabel" aria-hidden="true">
+            <div class="modal-dialog px-4 pt-160px">
+                <div class="modal-content p-4">
+                    <div class="text-end">
+                        <button type="button" class="btn-close p-0" data-bs-dismiss="modal" aria-label="Close">
+                    </button>
+                    </div>
+                    <p class="text-dark mb-4">Are you sure you want to unsubscribe?</p>
+                    <div class="row">
+                        <div class="col-6">
+                            <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Decline</button>
+                        </div>
+                        <div class="col-6">
+                            <button type="button" class="btn btn-danger btn-sm" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#liveSubscriptionConfirmed">Confirm</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="liveSubscriptionConfirmed" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="liveSubscriptionConfirmedLabel" aria-hidden="true">
+            <div class="modal-dialog px-4 pt-140px">
+                <div class="modal-content p-4">
+                    <div class="text-end">
+                        <button type="button" class="btn-close p-0" data-bs-dismiss="modal" aria-label="Close">
+                    </button>
+                    </div>
+                    <p class="text-dark mb-4">Are you sure you want to unsubscribe?</p>
+
+                    <div class="row justify-content-center">
+                        <div class="col-6 text-center">
+                            <button type="button" class="btn btn-primary w-100 px-0" data-bs-toggle="modal" data-bs-target="#liveSubscriptionConfirmed">Continue</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        //= html_partials/footer.html
+    </main>
+</body>
+
+//= html_partials/scripts.html
+
+</html>

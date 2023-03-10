@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="lv">
+//= html_partials/head.html
+
+<body class="index landing position-relative">
+    <main>
+        <!-- Header -->
+        //= html_partials/header.html
+        <!-- Main section -->
+        <section class="category">
+            <div class="container">
+                <div class="row mb-lg-5 mb-4">
+                    <div class="col-lg-6 col-12">
+                        <a href="account.html">
+                            <h5 class="mb-0 d-flex">
+                                <icon class="icon icon-prev pe-3 d-grid"></icon>Contact us
+                            </h5>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-9 col-12">
+                        <form class="row">
+                            <div class="col-lg-6 col-12 mb-3 text-start">
+                                <label for="inputEmail" class="form-label text-body fw-medium fs-7 mb-3">We are here for you! How can we help?</label>
+                                <input type="email" class="form-control bg-dark" id="inputEmail" placeholder="Enter email: Example@playwing.com">
+                            </div>
+
+                            <div class="col-lg-6 col-12 col-lg-6 mb-4 text-start">
+                                <div class="custom-select" id="selectLanguage">
+                                    <select>
+                                        <option>Select Issue</option> <!-- placeholder -->
+                                        <option value="1">Issue 1</option> 
+                                        <option value="2">Issue 2</option>
+                                      </select>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12 mb-4 text-start">
+                                <textarea class="form-control bg-dark" id="textareaMessage" rows="4" placeholder="Describe your issue here"></textarea>
+                            </div>
+
+                            <div class="col-lg-6 col-12 py-2">
+                                <label for="textAttachment" class="form-label fw-medium fs-7 text-body mb-3">Attachment</label>
+                                <div class="d-flex align-items-center">
+                                    <button class="btn btn-dark chose-attachment-file-btn">Choose files</button>
+                                    <p class="text-muted ps-4 attachment-file-name fst-italic">No file chosen</p>
+                                    <input type="file" class="d-none" name="attachment-file" id="attachment-file-input">
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-12 text-center mx-auto my-5 d-grid">
+                                <button type="button" class="btn btn-danger">Send</button>
+                            </div>
+
+                            <div class="col-lg-6 col-12 mb-3 text-start">
+                                <label for="inputUser" class="form-label fw-medium fs-7 text-body mb-3">User</label>
+                                <div class="card bg-dark text-center">
+                                    <a href="#" class="text-body">Wi-fi User not detected</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        //= html_partials/footer.html
+    </main>
+</body>
+
+//= html_partials/scripts.html
+
+</html>

@@ -9,7 +9,7 @@ $yellow-236: #FFFFEC;
 $yellow-200: #FFFFEF;
 $yellow-226: #F1F1E2;
 $green: #29D884;
-$pink-62: #FF3E3E;
+$red-62: #FF3E3E;
 $red-244: #F45733;
 $red-242: #F25531;
 $red-243: #F35632;
@@ -46,8 +46,9 @@ $h4-font-size: 2rem;
 $h5-font-size: 1.313rem;
 $headings-line-height: 1;
 $headings-font-weight: 700;
+$headings-color: $yellow-226;
 $font-weight-medium: 500;
-$font-sizes: ( 1: 2.5rem, 2: 2.25rem, 3: 1.5rem, 4: 1.125rem, 5: .938rem);
+$font-sizes: ( 1: 2.5rem, 2: 2.25rem, 3: 1.5rem, 4: 1.25rem, 5: 1.125rem, 6: .938rem, 7: .875rem);
 $spacer: 1rem;
 $spacers: ( 0: 0, 1: $spacer * .25, 2: $spacer * .5, 3: $spacer, 4: $spacer * 1.5, 5: $spacer * 3, 6: $spacer * 10);
 // break points
@@ -90,3 +91,15 @@ $form-feedback-invalid-color: $red-253;
 $form-feedback-font-size: .625rem;
 $input-box-shadow: none;
 $input-focus-box-shadow: none;
+// accordion
+$accordion-bg: $black-43;
+$accordion-color: $yellow-236;
+$accordion-border-radius: .375rem;
+$accordion-border-color: $black-43;
+$accordion-button-active-bg: $black-43;
+$accordion-button-active-color: $yellow-236;
+$accordion-padding-y: 1.063rem;
+$accordion-padding-x: 1rem;
+// modal
+$modal-content-border-radius: .438rem;
+$modal-content-bg: rgba(255, 255, 255, 0.9);
