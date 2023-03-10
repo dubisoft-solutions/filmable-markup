@@ -21,16 +21,19 @@ $navbar-height-sm: 2.938rem;
     min-height: var(--navbar-height);
     &.navbar-expand .navbar-nav {
         .dropdown-toggle {
-            font-size: 1.5rem;
             color: $yellow-236;
             padding: 0;
             @include media-breakpoint-down(md) {
                 font-size: 1.125rem;
             }
             .dropdown-icon-open {
+                width: 1.313rem;
+                height: 1.313rem;
                 display: none;
             }
             .dropdown-icon-close {
+                width: 1.313rem;
+                height: 1.313rem;
                 display: inline-block;
             }
             &.show {

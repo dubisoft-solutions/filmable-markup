@@ -22,16 +22,3 @@
     top: -3.75rem;
     right: -2.188rem;
 }
-
-.btn-close {
-    background: none!important;
-    padding: 0;
-    opacity: 1;
-    &::before {
-        @include icon-styles;
-        content: icon-char(close);
-        display: block;
-        font-size: 1.25rem;
-        color: $white;
-    }
-}
