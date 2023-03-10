@@ -1,7 +1,7 @@
 {
-  "name": "celebspot-page",
+  "name": "filmable-markup",
   "version": "1.0.0",
-  "description": "celebspot page",
+  "description": "filmable-markup",
   "main": "gulpfile.js",
   "scripts": {
     "dev": "gulp",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/dubisoft-solutions/celebspot-page.git"
+    "url": "https://github.com/dubisoft-solutions/filmable-markup.git"
   },
   "author": "Ivan Dubynets",
   "license": "ISC",
