@@ -1,6 +1,8 @@
 //= ../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js
 //= ../../node_modules/jquery/dist/jquery.slim.min.js
 //= ../../node_modules/bootstrap-select/dist/js/bootstrap-select.min.js
+//= ../../node_modules/owl.carousel/dist/owl.carousel.min.js
+
 
 //= https://www.google.com/recaptcha/api.js
 
@@ -48,8 +50,6 @@ function initFormValidation() {
         } else {
             form.addEventListener('submit', event => genericFormsValidation(event, form));
         }
-
-
     })
 }
 
