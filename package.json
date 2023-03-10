@@ -37,6 +37,7 @@
     "bootstrap-select": "^1.14.0-beta2",
     "gulp-iconfont": "^11.0.1",
     "gulp-iconfont-css": "^3.0.0",
-    "jquery": "^3.6.1"
+    "jquery": "^3.6.1",
+    "owl.carousel": "^2.3.4"
   }
 }
