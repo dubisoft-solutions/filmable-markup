@@ -2,7 +2,7 @@ $navbar-height: 4.25rem;
 $navbar-height-sm: 2.938rem;
 .navbar {
     --navbar-height: #{$navbar-height};
-    background: $black-26;
+    background: transparent;
     border: none;
     padding: 0;
     min-height: 4.25rem;
@@ -125,5 +125,8 @@ $navbar-height-sm: 2.938rem;
                 top: 2.5rem;
             }
         }
+    }
+    &.scrolled {
+        background-color: $black-26;
     }
 }

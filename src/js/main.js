@@ -11,6 +11,7 @@ $(function() {
     initSelectPicker();
     initRecaptcha('6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI', ".grecaptcha");
     initFormValidation();
+    addScrolledClassToNavbarOnScroll();
 });
 
 function initSelectPicker() {
@@ -133,6 +134,24 @@ $(function() {
         })
     }
 });
+
+/**
+ * navbar scrolled
+ */
+function addScrolledClassToNavbarOnScroll() {
+    const navbar = document.querySelector('.top-navbar')
+    if (!navbar) return;
+
+    const updateScrolledState = () => {
+        navbar.classList.toggle('scrolled', window.scrollY != 0);
+    }
+
+    window.addEventListener('scroll', (e) => {
+        updateScrolledState();
+    })
+
+    updateScrolledState();
+}
 
 /**
  * File picker
