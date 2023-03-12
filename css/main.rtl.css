@@ -16199,12 +16199,14 @@ p {
   }
 }
 
-.category {
+.category,
+.account {
   min-height: calc(82vh - 0px);
   margin: 8.875rem 0 6.688rem 0;
 }
 @media (max-width: 767.98px) {
-  .category {
+  .category,
+  .account {
     margin: 4.75rem 0 5.25rem 0;
   }
 }
