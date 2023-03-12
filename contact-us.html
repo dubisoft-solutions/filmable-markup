@@ -46,38 +46,61 @@
             </nav>
         </header>
         <!-- Main section -->
-        <section class="category">
+        <section class="account">
             <div class="container">
                 <div class="row mb-lg-5 mb-4">
                     <div class="col-lg-6 col-12">
-                        <a href="home.html">
+                        <a href="account.html">
                             <h5 class="mb-0 d-flex">
-                                <icon class="icon icon-prev pe-3 d-grid"></icon>Political Figures
+                                <icon class="icon icon-prev pe-3 d-grid"></icon>Contact us
                             </h5>
                         </a>
                     </div>
                 </div>
-                <div class="row row-cols-3 row-cols-sm-4 row-cols-md-5 row-cols-lg-6 g-2 g-lg-3">
-                    <div class="col p-lg-3 p-1">
-                        <img src="img/political-figures/img-1.png" alt="Image 1" class="img-size">
-                    </div>
-                    <div class="col p-lg-3 p-1">
-                        <img src="img/political-figures/img-2.png" alt="Image 2" class="img-size">
-                    </div>
-                    <div class="col p-lg-3 p-1">
-                        <img src="img/political-figures/img-3.png" alt="Image 3" class="img-size">
-                    </div>
-                    <div class="col p-lg-3 p-1">
-                        <img src="img/political-figures/img-4.png" alt="Image 4" class="img-size">
-                    </div>
-                    <div class="col p-lg-3 p-1">
-                        <img src="img/political-figures/img-5.png" alt="Image 5" class="img-size">
-                    </div>
-                    <div class="col p-lg-3 p-1">
-                        <img src="img/political-figures/img-6.png" alt="Image 6" class="img-size">
-                    </div>
-                    <div class="col p-lg-3 p-1">
-                        <img src="img/political-figures/img-7.png" alt="Image 7" class="img-size">
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-9 col-12">
+                        <p class="text-body fw-medium fs-7 mb-3">We are here for you! How can we help?</p>
+                        <form class="row">
+                            <div class="col-lg-6 col-12 mb-3 text-start">
+                                <input type="email" class="form-control bg-dark" id="inputEmail" placeholder="Enter email: Example@playwing.com">
+                            </div>
+
+                            <div class="col-lg-6 col-12 col-lg-6 mb-4 text-start">
+                                <select class="selectpicker w-100" multiple title="Select Issue">
+                                    <option>Freeze / Crash / Loading Issues</option>
+                                    <option>Questions / Feedback </option>
+                                    <option>Subcription / Unsubscription Issues</option>
+                                    <option>Videos are not working </option>
+                                    <option>Other</option>
+                                  </select>
+                            </div>
+
+                            <div class="col-lg-12 mb-4 text-start">
+                                <textarea class="form-control bg-dark" id="textareaMessage" rows="12" placeholder="Describe your issue here"></textarea>
+                            </div>
+
+                            <div class="col-lg-6 col-12 py-2">
+                                <label for="textAttachment" class="form-label fw-medium fs-7 text-body mb-4">Attachment</label>
+                                <div class="d-flex align-items-center">
+                                    <button class="btn btn-dark btn-xs chose-attachment-file-btn">Choose files</button>
+                                    <p class="text-muted ps-4 attachment-file-name fst-italic fs-7">No file chosen</p>
+                                    <input type="file" class="d-none" name="attachment-file" id="attachment-file-input">
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-12 text-center mx-auto my-5 d-grid">
+                                <button type="button" class="btn btn-danger">Send</button>
+                            </div>
+                        </form>
+                        <div class="row justify-content-lg-center justify-content-start">
+                            <div class="col-lg-6 col-12 mb-3 text-start">
+                                <label for="inputUser" class="form-label fw-medium fs-7 text-body mb-3">User</label>
+                                <div class="card bg-dark text-center">
+                                    <a href="#" class="text-body">Wi-fi User not detected</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
