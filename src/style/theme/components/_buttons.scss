@@ -84,4 +84,10 @@
     @include media-breakpoint-up(xxxxl) {
         font-size: 1.25rem;
     }
+    &.btn-sm {
+        font-size: 1.25rem;
+        @include media-breakpoint-down(md) {
+            font-size: .875rem;
+        }
+    }
 }

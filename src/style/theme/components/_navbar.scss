@@ -42,7 +42,7 @@ $navbar-height-sm: 2.938rem;
                     bottom: 0;
                     left: 0;
                     right: 0;
-                    background: rgba(25, 22, 38, 0.8);
+                    background: rgba(22, 19, 19, 0.9);
                     content: '';
                     z-index: 1;
                 }
@@ -114,6 +114,11 @@ $navbar-height-sm: 2.938rem;
                     background: linear-gradient(359.45deg, #C73F3B 0.32%, #F85A52 102.56%);
                     opacity: .8;
                 }
+            }
+            @include media-breakpoint-between(sm,
+            lg) {
+                position: absolute;
+                top: 1.75rem;
             }
             @include media-breakpoint-up(lg) {
                 position: absolute;
