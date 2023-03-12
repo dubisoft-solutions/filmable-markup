@@ -26,6 +26,10 @@ textarea {
     color: $gray-87;
 }
 
+.text-muted {
+    color: $gray-158!important;
+}
+
 .text-body {
     color: $yellow-236!important;
 }
@@ -40,6 +44,10 @@ textarea {
 
 .bg-dark {
     background-color: $black-43!important;
+}
+
+.border-bottom {
+    --bs-border-color: #{$gray-87};
 }
 
 .object-fit-img {

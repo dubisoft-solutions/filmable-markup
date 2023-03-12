@@ -14,6 +14,7 @@ $red-244: #F45733;
 $red-242: #F25531;
 $red-243: #F35632;
 $red-253: #FD5732;
+$red-233: #E9514B;
 $gray-217: #D9D9D9;
 $gray-219: #DBDBDB;
 $gray-201: #C9C9C9;
@@ -54,7 +55,7 @@ $spacers: ( 0: 0, 1: $spacer * .25, 2: $spacer * .5, 3: $spacer, 4: $spacer * 1.
 // break points
 $grid-breakpoints: (xxc:0, xs: 390px, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1440px, xxxl: 1548px, xxxxl: 1920px, xxxxxl: 2560px);
 // containers
-$container-max-widths: (xc: 355px, sm: 540px, md: 720px, lg: 960px, xl: 1140px, xxl: 1267px, xxxl: 1375px, xxxxl: 1747px, xxxxxl: 2387px);
+$container-max-widths: (xc: 100%, sm: 540px, md: 720px, lg: 960px, xl: 1140px, xxl: 1267px, xxxl: 1375px, xxxxl: 1747px, xxxxxl: 2387px);
 // box-shadow
 $box-shadow: 0px 4.32166px 4.32166px rgba(0, 0, 0, 0.25),
 inset 0px 4.32166px 21.6083px rgba(0, 0, 0, 0.14) !default;
@@ -63,27 +64,31 @@ $border-radius-md: 2.75rem!default;
 $border-radius-lg: 6.375rem!default;
 // buttons
 $btn-font-weight: 500;
+$btn-font-size: 1.5rem;
+$btn-padding-x: 2rem;
+$btn-padding-y: .875rem;
+$bs-btn-border-radius: .75rem;
 $btn-color: $white!default;
 // dropdown
 $dropdown-padding-x: 0;
 $dropdown-padding-y: .625rem;
 $dropdown-item-padding-y: .813rem;
 $dropdown-item-padding-x: 2.5rem;
-$dropdown-border-radius: .313rem;
+$dropdown-border-radius: .75rem;
 $dropdown-font-size: 1rem;
 $dropdown-bg: transparent!default;
 $dropdown-color: $yellow-226!default;
 $dropdown-link-color: $yellow-226;
 $dropdown-link-hover-color: $yellow-226;
 // form-control
-$input-font-size: 1.25rem;
+$input-font-size: .875rem;
 $input-line-height: 1;
 $input-font-weight: 500;
 $input-color: $gray-90;
 $input-bg: $light;
 $input-border-color: $light;
-$input-padding-y: .685rem;
-$input-padding-x: .875rem;
+$input-padding-y: 1.188rem;
+$input-padding-x: 1rem;
 $input-group-addon-color: $light;
 $input-group-addon-border-color: transparent;
 $input-group-addon-bg: transparent;

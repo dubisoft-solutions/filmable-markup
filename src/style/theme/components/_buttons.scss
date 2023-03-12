@@ -2,6 +2,18 @@
     --bs-btn-color: #{$white};
     --bs-btn-hover-color: #{$white};
     --bs-btn-active-color: #{$white};
+    &.btn-xs {
+        --bs-btn-font-size: 1rem;
+        --bs-btn-padding-x: 2rem;
+        --bs-btn-padding-y: 1.07rem;
+        --bs-btn-border-radius: .375rem;
+        @include media-breakpoint-down(md) {
+            --bs-btn-font-size: .875rem;
+            --bs-btn-padding-x: 1.5rem;
+            --bs-btn-padding-y: .875rem;
+            --bs-btn-border-radius: .313rem;
+        }
+    }
     &.btn-sm {
         --bs-btn-font-size: 1.313rem;
         --bs-btn-padding-x: 2rem;
@@ -15,25 +27,27 @@
         }
     }
     &.btn-lg {
-        --bs-btn-font-size: 1.5rem;
-        --bs-btn-padding-x: 2rem;
-        --bs-btn-padding-y: .5rem;
-        --bs-btn-border-radius: .75rem;
+        --bs-btn-font-size: 2.813rem;
+        --bs-btn-padding-x: 1.5rem;
+        --bs-btn-padding-y: 1.75rem;
+        --bs-btn-border-radius: 5.313rem;
         @include media-breakpoint-down(md) {
             --bs-btn-font-size: 1.063rem;
             --bs-btn-padding-x: 1.25rem;
             --bs-btn-padding-y: 1rem;
-            --bs-btn-border-radius: .25rem;
+            --bs-btn-border-radius: 2.75rem;
         }
+    }
+    @include media-breakpoint-down(md) {
+        --bs-btn-font-size: 1.25rem;
+        --bs-btn-padding-x: 2rem;
+        --bs-btn-padding-y: 1rem;
+        --bs-btn-border-radius: .313rem;
     }
 }
 
 .btn-danger {
     --bs-btn-hover-color: #{$white};
-    --bs-btn-font-size: 2.813rem;
-    --bs-btn-padding-x: 1.5rem;
-    --bs-btn-padding-y: 1.75rem;
-    --bs-btn-border-radius: #{$border-radius-lg};
     background: $gradient-red!important;
     border: none;
     &:focus,
@@ -42,12 +56,6 @@
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 1px 1px 7px 3px rgba(255, 51, 57, 0.44), inset 0px 4.32166px 21.6083px rgba(0, 0, 0, 0.14);
         color: $white;
         background-color: $gradient-red;
-    }
-    @include media-breakpoint-down(md) {
-        --bs-btn-font-size: 1.25rem;
-        --bs-btn-border-radius: #{$border-radius-md};
-        --bs-btn-padding-x: 1.5rem;
-        --bs-btn-padding-y: .75rem;
     }
 }
 
@@ -59,6 +67,11 @@
 .btn-primary {
     background: linear-gradient(180deg, #3ACDFC 0%, #3283FD 100%);
     border: none;
+}
+
+.btn-dark {
+    background: $black-43;
+    border: 1px solid $red-233;
 }
 
 .btn-link {

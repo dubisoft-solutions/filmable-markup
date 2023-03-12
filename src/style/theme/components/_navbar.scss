@@ -23,18 +23,23 @@ $navbar-height-sm: 2.938rem;
         .dropdown-toggle {
             color: $yellow-236;
             padding: 0;
-            @include media-breakpoint-down(md) {
-                font-size: 1.125rem;
-            }
             .dropdown-icon-open {
-                width: 1.313rem;
-                height: 1.313rem;
                 display: none;
+                width: 1.5rem;
+                height: 1.5rem;
+                @include media-breakpoint-down(md) {
+                    width: 1.313rem;
+                    height: 1.313rem;
+                }
             }
             .dropdown-icon-close {
-                width: 1.313rem;
-                height: 1.313rem;
                 display: inline-block;
+                width: 1.5rem;
+                height: 1.5rem;
+                @include media-breakpoint-down(md) {
+                    width: 1.313rem;
+                    height: 1.313rem;
+                }
             }
             &.show {
                 .dropdown-icon-open {

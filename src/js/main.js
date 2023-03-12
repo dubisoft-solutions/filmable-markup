@@ -85,10 +85,10 @@ function genericFormsValidation(event, form) {
  * carousel setup
  */
 $(function() {
-    if ($('.owl-carousel').length > 0) {
-        $('.owl-carousel').owlCarousel({
+    if ($('.video .owl-carousel').length > 0) {
+        $('.video .owl-carousel').owlCarousel({
             loop: true,
-            margin: 25,
+            margin: 10,
             responsiveClass: true,
             autoplay: true,
             autoplayTimeout: 3000,
@@ -97,18 +97,37 @@ $(function() {
 
             responsive: {
                 0: {
-                    items: 1,
+                    items: 2,
                     stagePadding: 80
                 },
-                720: {
-                    items: 3,
-                    stagePadding: 60
-                },
-                1050: {
+                576: {
                     items: 4
                 },
-                1200: {
+                992: {
                     items: 5
+                },
+                1200: {
+                    items: 6
+                }
+            }
+        })
+    }
+});
+
+$(function() {
+    if ($('.hero .owl-carousel').length > 0) {
+        $('.hero .owl-carousel').owlCarousel({
+            loop: true,
+            margin: 10,
+            responsiveClass: true,
+            autoplay: false,
+            autoplayTimeout: 3000,
+            nav: false,
+            dots: true,
+
+            responsive: {
+                0: {
+                    items: 1
                 }
             }
         })

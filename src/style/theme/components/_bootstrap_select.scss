@@ -4,23 +4,29 @@
     .dropdown-toggle.btn-light {
         border: none;
         background-color: $black-43;
-        padding: .5rem .5rem;
-        font-size: .75rem;
+        padding: 1rem;
+        font-size: .875rem;
         color: $yellow-236;
-        line-height: 2;
         &::placeholder {
             color: $yellow-236;
             @include media-breakpoint-down(md) {
                 font-size: .813rem!important;
             }
         }
+        &::after {
+            @include icon-styles;
+            content: icon-char(arrow-down);
+            color: $yellow-236;
+            font-size: 1.5rem;
+            border-top: none;
+            border-bottom: none;
+            border-right: none;
+            border-left: none;
+        }
         &:focus {
             outline: none!important;
             outline-offset: none!important;
             box-shadow: none;
-        }
-        @include media-breakpoint-down(md) {
-            padding: .5rem;
         }
         &.show,
         &:active,
@@ -40,62 +46,42 @@
         background-color: linear-gradient(152.98deg, rgba(255, 255, 255, 0.2) 14.8%, rgba(255, 255, 255, 0.01) 87.76%);
         box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.2);
         border: none;
-        padding: .625rem 0;
-        padding-right: .25rem;
         ul {
             background-color: $black-43;
-            max-height: 7.25rem;
             overflow-y: auto;
-            padding-left: 0;
             margin-bottom: 0;
             &.show {
                 color: $yellow-236;
                 background-color: $black-43;
                 border: none;
+                border-radius: .313rem;
+                padding: 1rem 0;
             }
             .dropdown-item {
                 font-weight: 500;
+                font-size: 1rem;
                 color: $yellow-236;
+                padding: .813rem 1rem;
                 &.active,
                 &:hover,
                 &:focus {
                     color: $yellow-236;
                     background: linear-gradient(359.45deg, #C73F3B 0.32%, #F85A52 102.56%);
                     opacity: 0.8;
-                    border-radius: .125rem;
                 }
                 @include media-breakpoint-down(md) {
-                    font-size: .75rem;
-                    padding: .35rem 1rem;
-                }
-                @include media-breakpoint-up(xxxxl) {
-                    font-size: 1rem;
+                    font-size: .875rem;
                 }
             }
-        }
-        ul::-webkit-scrollbar {
-            width: .563rem;
-            @include media-breakpoint-down(md) {
-                width: .25rem;
-            }
-        }
-        ul::-webkit-scrollbar-track {
-            background: $red-253;
-            border-radius: .25rem;
-        }
-        ul::-webkit-scrollbar-thumb {
-            background: $red-253;
-            border-radius: .25rem;
         }
     }
 }
 
 .bootstrap-select>.dropdown-toggle.bs-placeholder {
     font-size: 1rem!important;
-    font-style: italic;
     color: $yellow-236;
     @include media-breakpoint-down(md) {
-        font-size: .813rem!important;
+        font-size: .875rem!important;
     }
 }
 
@@ -103,10 +89,9 @@
 .bootstrap-select>.dropdown-toggle.bs-placeholder:active,
 .bootstrap-select>.dropdown-toggle.bs-placeholder:focus,
 .bootstrap-select>.dropdown-toggle.bs-placeholder:hover {
-    font-size: .75rem!important;
-    font-style: italic;
+    font-size: 1rem!important;
     color: $yellow-236;
     @include media-breakpoint-down(md) {
-        font-size: .813rem!important;
+        font-size: .875rem!important;
     }
 }
