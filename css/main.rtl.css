@@ -16188,99 +16188,92 @@ p {
     font-size: 0.75rem !important;
   }
 }
-
-.hero {
+.index .main {
   min-height: calc(82vh - 0px);
+}
+.index .hero {
   margin-top: 4.25rem;
 }
 @media (max-width: 767.98px) {
-  .hero {
+  .index .hero {
     margin-top: 2.938rem !important;
   }
 }
-
-.category,
-.account {
-  min-height: calc(82vh - 0px);
+.index .category,
+.index .account {
   margin: 8.875rem 0 6.688rem 0;
 }
 @media (max-width: 767.98px) {
-  .category,
-  .account {
+  .index .category,
+  .index .account {
     margin: 4.75rem 0 5.25rem 0;
   }
 }
-
-.img-style {
+.index .account .attachment-file-name {
+  max-width: 12.5rem;
+}
+.index .img-style {
   height: 32.875rem;
 }
 @media (max-width: 767.98px) {
-  .img-style {
+  .index .img-style {
     height: 18.75rem;
   }
 }
-
-.card {
+.index .card {
   padding: 0.94rem 1.625rem;
   border-radius: 0.375rem;
 }
-
-.img-size {
+.index .img-size {
   width: 12rem;
   height: 15.625rem;
 }
 @media (max-width: 767.98px) {
-  .img-size {
+  .index .img-size {
     width: 6.25rem;
     height: 8.125rem;
   }
 }
-
-.text-copyright {
+.index .text-copyright {
   color: #9A9A9A;
   font-size: 0.813rem;
 }
 @media (max-width: 767.98px) {
-  .text-copyright {
+  .index .text-copyright {
     font-size: 0.625rem;
   }
 }
-
-.confirmation-title {
+.index .confirmation-title {
   font-size: 1.25rem;
 }
 @media (max-width: 767.98px) {
-  .confirmation-title {
+  .index .confirmation-title {
     font-size: 0.875rem;
   }
 }
-
-.play-btn {
+.index .play-btn {
   width: 3rem;
   height: 3rem;
   background-color: #464646;
   border: 2px solid #FFFFEC;
 }
-.play-btn .icon-style {
+.index .play-btn .icon-style {
   font-size: 0.875rem;
 }
-
-.list-items .list-item {
+.index .list-items .list-item {
   font-size: 0.938rem;
 }
 @media (max-width: 767.98px) {
-  .list-items .list-item {
+  .index .list-items .list-item {
     font-size: 0.75rem;
   }
 }
-
 @media (max-width: 575.98px) {
-  .video .owl-stage {
+  .index .video .owl-stage {
     right: -40px;
   }
 }
-
-.video-title-block {
+.index .video-title-block {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -16288,20 +16281,19 @@ p {
   background: linear-gradient(-180deg, rgba(28, 28, 28, 0) 0%, #1C1C1C 100%);
   padding: 2rem 1.5rem;
 }
-
-.thank-you {
+.index .thank-you {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #060606;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-.thank-you main {
+.index .thank-you main {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
-.thank-you main .main-bg {
+.index .thank-you main .main-bg {
   position: relative;
 }
-.thank-you main .main-bg::before {
+.index .thank-you main .main-bg::before {
   width: 100%;
   height: 100%;
   content: "";
@@ -16315,59 +16307,58 @@ p {
   background-size: contain;
 }
 @media (min-width: 576px) {
-  .thank-you main .main-bg::before {
+  .index .thank-you main .main-bg::before {
     background-image: url("../img/thank-you-bg-desktop.png");
     background-size: cover;
   }
 }
-.thank-you main .check-circle {
+.index .thank-you main .check-circle {
   width: 7.938rem;
   height: 7.938rem;
   background-color: #FFFFEC;
 }
-.thank-you main .check-circle .icon-style {
+.index .thank-you main .check-circle .icon-style {
   font-size: 3.125rem;
 }
 @media (max-width: 767.98px) {
-  .thank-you main .check-circle .icon-style {
+  .index .thank-you main .check-circle .icon-style {
     font-size: 2.25rem;
   }
 }
 @media (max-width: 767.98px) {
-  .thank-you main .check-circle {
+  .index .thank-you main .check-circle {
     width: 5rem;
     height: 5rem;
   }
 }
-.thank-you .text-block {
+.index .thank-you .text-block {
   background: linear-gradient(-180deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
   border-radius: 41px;
   padding: 3.625rem 5rem 1.5rem 5rem;
 }
 @media (max-width: 767.98px) {
-  .thank-you .text-block {
+  .index .thank-you .text-block {
     background: transparent;
     padding: 0;
   }
 }
-
-.footer {
+.index .footer {
   background: #070707;
   padding: 1rem 0 0.625rem 0;
 }
 @media (max-width: 767.98px) {
-  .footer {
+  .index .footer {
     padding: 2.5rem 0 1.5rem 0;
     background: transparent;
   }
 }
-.footer .list-inline .list-inline-item .btn-link {
+.index .footer .list-inline .list-inline-item .btn-link {
   font-size: 1.125rem;
   --bs-link-color: #6F6F6F;
   --bs-link-hover-color: #FFFFEC;
 }
 @media (max-width: 767.98px) {
-  .footer .list-inline .list-inline-item .btn-link {
+  .index .footer .list-inline .list-inline-item .btn-link {
     font-size: 0.813rem;
   }
 }
