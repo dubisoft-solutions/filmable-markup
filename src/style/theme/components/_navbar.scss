@@ -25,20 +25,16 @@ $navbar-height-sm: 2.938rem;
             padding: 0;
             .dropdown-icon-open {
                 display: none;
-                width: 1.5rem;
-                height: 1.5rem;
+                min-width: 1.5rem;
                 @include media-breakpoint-down(md) {
-                    width: 1.313rem;
-                    height: 1.313rem;
+                    min-width: 1.313rem;
                 }
             }
             .dropdown-icon-close {
                 display: inline-block;
-                width: 1.5rem;
-                height: 1.5rem;
+                min-width: 1.5rem;
                 @include media-breakpoint-down(md) {
-                    width: 1.313rem;
-                    height: 1.313rem;
+                    min-width: 1.313rem;
                 }
             }
             &.show {
