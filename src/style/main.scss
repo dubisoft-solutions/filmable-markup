@@ -36,9 +36,6 @@
             }
         }
     }
-    .main {
-        min-height: calc(82vh - 0px);
-    }
     .hero {
         margin-top: 4.25rem;
         @include media-breakpoint-down(md) {
@@ -120,26 +117,10 @@
         background: linear-gradient(180deg, rgba(28, 28, 28, 0) 0%, #1C1C1C 100%);
         padding: 2rem 1.5rem;
     }
-    .footer {
-        background: $black-7;
-        padding: 2.5rem 0 1.5rem 0;
-        @include media-breakpoint-down(md) {
-            padding: 1.5rem 0 .625rem 0;
-            background: transparent;
-        }
-        .list-inline {
-            .list-inline-item {
-                .btn-link {
-                    font-size: 1.125rem;
-                    --bs-link-color: #{$gray-11};
-                    --bs-link-hover-color: #{$yellow-236};
-                    @include media-breakpoint-down(md) {
-                        font-size: .813rem;
-                    }
-                }
-            }
-        }
-    }
+}
+
+.main {
+    min-height: calc(82vh - 0px);
 }
 
 .thank-you {
@@ -192,6 +173,30 @@
         @include media-breakpoint-down(md) {
             background: transparent;
             padding: 0;
+        }
+    }
+    .pt-6 {
+        padding-top: 8rem!important;
+    }
+}
+
+.footer {
+    background: $black-7;
+    padding: 2.5rem 0 1.5rem 0;
+    @include media-breakpoint-down(md) {
+        padding: 1.5rem 0 .625rem 0;
+        background: transparent;
+    }
+    .list-inline {
+        .list-inline-item {
+            .btn-link {
+                font-size: 1.125rem;
+                --bs-link-color: #{$gray-11};
+                --bs-link-hover-color: #{$yellow-236};
+                @include media-breakpoint-down(md) {
+                    font-size: .813rem;
+                }
+            }
         }
     }
 }
