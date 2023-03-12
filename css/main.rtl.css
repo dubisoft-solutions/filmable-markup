@@ -14856,6 +14856,14 @@ textarea.form-control-lg {
     font-size: 1.25rem;
   }
 }
+.btn-link.btn-sm, .btn-group-sm > .btn-link.btn {
+  font-size: 1.25rem;
+}
+@media (max-width: 767.98px) {
+  .btn-link.btn-sm, .btn-group-sm > .btn-link.btn {
+    font-size: 0.875rem;
+  }
+}
 
 .form-control {
   border: 0;
@@ -14968,7 +14976,7 @@ textarea.form-control-lg {
 
 .navbar {
   --navbar-height: 4.25rem;
-  background: #1A1A1A;
+  background: #131313;
   border: none;
   padding: 0;
   min-height: 4.25rem;
@@ -14988,7 +14996,7 @@ textarea.form-control-lg {
   }
 }
 .navbar.menu-visible {
-  background: #1A1A1A;
+  background: #131313;
 }
 .navbar.navbar-expand .navbar-nav .dropdown-toggle {
   color: #FFFFEC;
@@ -14996,21 +15004,9 @@ textarea.form-control-lg {
 }
 .navbar.navbar-expand .navbar-nav .dropdown-toggle .dropdown-icon-open {
   display: none;
-  min-width: 1.5rem;
-}
-@media (max-width: 767.98px) {
-  .navbar.navbar-expand .navbar-nav .dropdown-toggle .dropdown-icon-open {
-    min-width: 1.313rem;
-  }
 }
 .navbar.navbar-expand .navbar-nav .dropdown-toggle .dropdown-icon-close {
   display: inline-block;
-  min-width: 1.5rem;
-}
-@media (max-width: 767.98px) {
-  .navbar.navbar-expand .navbar-nav .dropdown-toggle .dropdown-icon-close {
-    min-width: 1.313rem;
-  }
 }
 .navbar.navbar-expand .navbar-nav .dropdown-toggle.show .dropdown-icon-open {
   display: inline-block;
@@ -15024,12 +15020,15 @@ textarea.form-control-lg {
   bottom: 0;
   right: 0;
   left: 0;
-  background: rgba(25, 22, 38, 0.8);
+  background: rgba(22, 19, 19, 0.9);
   content: "";
   z-index: 1;
 }
 .navbar.navbar-expand .navbar-nav .dropdown-toggle::after {
   display: none;
+}
+.navbar.navbar-expand .navbar-nav .dropdown-toggle:focus {
+  outline: none;
 }
 .navbar.navbar-expand .navbar-nav .dropdown-menu {
   position: fixed;
@@ -15090,6 +15089,18 @@ textarea.form-control-lg {
 .navbar.navbar-expand .navbar-nav .dropdown-menu .dropdown-item:focus, .navbar.navbar-expand .navbar-nav .dropdown-menu .dropdown-item:hover, .navbar.navbar-expand .navbar-nav .dropdown-menu .dropdown-item:active {
   background: linear-gradient(-359.45deg, #C73F3B 0.32%, #F85A52 102.56%);
   opacity: 0.8;
+}
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .navbar.navbar-expand .navbar-nav .dropdown-menu {
+    position: absolute;
+    top: 1.75rem;
+  }
+}
+@media (min-width: 992px) {
+  .navbar.navbar-expand .navbar-nav .dropdown-menu {
+    position: absolute;
+    top: 2.5rem;
+  }
 }
 
 .dropdown-toggle {
@@ -15818,6 +15829,10 @@ select.selectpicker {
   }
 }
 
+.bootstrap-select .bs-ok-default:after {
+  display: none;
+}
+
 .bootstrap-select > .dropdown-toggle.bs-placeholder {
   font-size: 1rem !important;
   color: #FFFFEC;
@@ -15898,6 +15913,15 @@ textarea {
 
 .object-fit-img {
   object-fit: cover;
+}
+
+.mw-24 {
+  min-width: 1.5rem;
+}
+@media (max-width: 767.98px) {
+  .mw-24 {
+    min-width: 1.313rem;
+  }
 }
 
 @media (max-width: 767.98px) {
@@ -16210,7 +16234,7 @@ p {
   }
 }
 .index .account .attachment-file-name {
-  max-width: 12.5rem;
+  max-width: 10.5rem;
 }
 .index .img-style {
   height: 32.875rem;
@@ -16281,19 +16305,40 @@ p {
   background: linear-gradient(-180deg, rgba(28, 28, 28, 0) 0%, #1C1C1C 100%);
   padding: 2rem 1.5rem;
 }
-.index .thank-you {
+.index .footer {
+  background: #070707;
+  padding: 2.5rem 0 1.5rem 0;
+}
+@media (max-width: 767.98px) {
+  .index .footer {
+    padding: 1.5rem 0 0.625rem 0;
+    background: transparent;
+  }
+}
+.index .footer .list-inline .list-inline-item .btn-link {
+  font-size: 1.125rem;
+  --bs-link-color: #6F6F6F;
+  --bs-link-hover-color: #FFFFEC;
+}
+@media (max-width: 767.98px) {
+  .index .footer .list-inline .list-inline-item .btn-link {
+    font-size: 0.813rem;
+  }
+}
+
+.thank-you {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #060606;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-.index .thank-you main {
+.thank-you main {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
-.index .thank-you main .main-bg {
+.thank-you main .main-bg {
   position: relative;
 }
-.index .thank-you main .main-bg::before {
+.thank-you main .main-bg::before {
   width: 100%;
   height: 100%;
   content: "";
@@ -16307,58 +16352,38 @@ p {
   background-size: contain;
 }
 @media (min-width: 576px) {
-  .index .thank-you main .main-bg::before {
+  .thank-you main .main-bg::before {
     background-image: url("../img/thank-you-bg-desktop.png");
     background-size: cover;
   }
 }
-.index .thank-you main .check-circle {
+.thank-you main .check-circle {
   width: 7.938rem;
   height: 7.938rem;
   background-color: #FFFFEC;
 }
-.index .thank-you main .check-circle .icon-style {
+.thank-you main .check-circle .icon-style {
   font-size: 3.125rem;
 }
 @media (max-width: 767.98px) {
-  .index .thank-you main .check-circle .icon-style {
+  .thank-you main .check-circle .icon-style {
     font-size: 2.25rem;
   }
 }
 @media (max-width: 767.98px) {
-  .index .thank-you main .check-circle {
+  .thank-you main .check-circle {
     width: 5rem;
     height: 5rem;
   }
 }
-.index .thank-you .text-block {
+.thank-you .text-block {
   background: linear-gradient(-180deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
   border-radius: 41px;
   padding: 3.625rem 5rem 1.5rem 5rem;
 }
 @media (max-width: 767.98px) {
-  .index .thank-you .text-block {
+  .thank-you .text-block {
     background: transparent;
     padding: 0;
-  }
-}
-.index .footer {
-  background: #070707;
-  padding: 1rem 0 0.625rem 0;
-}
-@media (max-width: 767.98px) {
-  .index .footer {
-    padding: 2.5rem 0 1.5rem 0;
-    background: transparent;
-  }
-}
-.index .footer .list-inline .list-inline-item .btn-link {
-  font-size: 1.125rem;
-  --bs-link-color: #6F6F6F;
-  --bs-link-hover-color: #FFFFEC;
-}
-@media (max-width: 767.98px) {
-  .index .footer .list-inline .list-inline-item .btn-link {
-    font-size: 0.813rem;
   }
 }
