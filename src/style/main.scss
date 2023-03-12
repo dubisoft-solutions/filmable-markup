@@ -54,7 +54,7 @@
     }
     .account {
         .attachment-file-name {
-            max-width: 12.5rem;
+            max-width: 10.5rem;
         }
     }
     .img-style {
@@ -120,64 +120,11 @@
         background: linear-gradient(180deg, rgba(28, 28, 28, 0) 0%, #1C1C1C 100%);
         padding: 2rem 1.5rem;
     }
-    .thank-you {
-        background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #060606;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        main {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            .main-bg {
-                position: relative;
-                &::before {
-                    width: 100%;
-                    height: 100%;
-                    content: "";
-                    display: block;
-                    position: absolute;
-                    top: 0;
-                    background-image: url("../img/thank-you-bg.png");
-                    background-position: top center;
-                    background-repeat: no-repeat;
-                    z-index: -1;
-                    background-size: contain;
-                    @include media-breakpoint-up(sm) {
-                        background-image: url("../img/thank-you-bg-desktop.png");
-                        background-size: cover;
-                    }
-                }
-            }
-            .check-circle {
-                width: 7.938rem;
-                height: 7.938rem;
-                background-color: $yellow-236;
-                .icon-style {
-                    font-size: 3.125rem;
-                    @include media-breakpoint-down(md) {
-                        font-size: 2.25rem;
-                    }
-                }
-                @include media-breakpoint-down(md) {
-                    width: 5rem;
-                    height: 5rem;
-                }
-            }
-        }
-        .text-block {
-            background: linear-gradient(180deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
-            border-radius: 41px;
-            padding: 3.625rem 5rem 1.5rem 5rem;
-            @include media-breakpoint-down(md) {
-                background: transparent;
-                padding: 0;
-            }
-        }
-    }
     .footer {
         background: $black-7;
-        padding: 1rem 0 .625rem 0;
+        padding: 2.5rem 0 1.5rem 0;
         @include media-breakpoint-down(md) {
-            padding: 2.5rem 0 1.5rem 0;
+            padding: 1.5rem 0 .625rem 0;
             background: transparent;
         }
         .list-inline {
@@ -191,6 +138,60 @@
                     }
                 }
             }
+        }
+    }
+}
+
+.thank-you {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #060606;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    main {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        .main-bg {
+            position: relative;
+            &::before {
+                width: 100%;
+                height: 100%;
+                content: "";
+                display: block;
+                position: absolute;
+                top: 0;
+                background-image: url("../img/thank-you-bg.png");
+                background-position: top center;
+                background-repeat: no-repeat;
+                z-index: -1;
+                background-size: contain;
+                @include media-breakpoint-up(sm) {
+                    background-image: url("../img/thank-you-bg-desktop.png");
+                    background-size: cover;
+                }
+            }
+        }
+        .check-circle {
+            width: 7.938rem;
+            height: 7.938rem;
+            background-color: $yellow-236;
+            .icon-style {
+                font-size: 3.125rem;
+                @include media-breakpoint-down(md) {
+                    font-size: 2.25rem;
+                }
+            }
+            @include media-breakpoint-down(md) {
+                width: 5rem;
+                height: 5rem;
+            }
+        }
+    }
+    .text-block {
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
+        border-radius: 41px;
+        padding: 3.625rem 5rem 1.5rem 5rem;
+        @include media-breakpoint-down(md) {
+            background: transparent;
+            padding: 0;
         }
     }
 }

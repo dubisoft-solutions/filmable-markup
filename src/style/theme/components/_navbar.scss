@@ -25,17 +25,9 @@ $navbar-height-sm: 2.938rem;
             padding: 0;
             .dropdown-icon-open {
                 display: none;
-                min-width: 1.5rem;
-                @include media-breakpoint-down(md) {
-                    min-width: 1.313rem;
-                }
             }
             .dropdown-icon-close {
                 display: inline-block;
-                min-width: 1.5rem;
-                @include media-breakpoint-down(md) {
-                    min-width: 1.313rem;
-                }
             }
             &.show {
                 .dropdown-icon-open {
@@ -57,6 +49,9 @@ $navbar-height-sm: 2.938rem;
             }
             &::after {
                 display: none;
+            }
+            &:focus {
+                outline: none;
             }
         }
         .dropdown-menu {
@@ -119,6 +114,10 @@ $navbar-height-sm: 2.938rem;
                     background: linear-gradient(359.45deg, #C73F3B 0.32%, #F85A52 102.56%);
                     opacity: .8;
                 }
+            }
+            @include media-breakpoint-up(lg) {
+                position: absolute;
+                top: 2.5rem;
             }
         }
     }
