@@ -8,19 +8,19 @@
             background: linear-gradient(180deg, #FFFFEC 0%, rgba(240, 240, 240, 0) 202.5%, rgba(240, 240, 240, 0) 202.5%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            &.fs-1 {
+            &.fs-2 {
                 font-size: 2.5rem;
                 @include media-breakpoint-down(md) {
                     font-size: 1.25rem!important;
                 }
             }
         }
-        .fs-2 {
+        .fs-3 {
             @include media-breakpoint-down(md) {
                 font-size: .875rem!important;
             }
         }
-        .fs-4 {
+        .fs-5 {
             @include media-breakpoint-down(md) {
                 font-size: .875rem!important;
             }
@@ -30,7 +30,7 @@
         }
     }
     &.home {
-        .fs-5 {
+        .fs-6 {
             @include media-breakpoint-down(md) {
                 font-size: .75rem!important;
             }
@@ -74,18 +74,18 @@
     .card {
         padding: 1.3rem 2.125rem;
     }
-    .fs-5,
-    .fs-6 {
-        @include media-breakpoint-down(md) {
-            font-size: .875rem!important;
-        }
-    }
+    .fs-6,
     .fs-7 {
         @include media-breakpoint-down(md) {
             font-size: .875rem!important;
         }
     }
     .fs-8 {
+        @include media-breakpoint-down(md) {
+            font-size: .875rem!important;
+        }
+    }
+    .fs-9 {
         @include media-breakpoint-down(md) {
             font-size: .875rem!important;
         }
@@ -190,6 +190,11 @@
                     background-size: cover;
                 }
             }
+        }
+        .check-block {
+            top: -3.125rem;
+            left: 0;
+            right: 0;
         }
         .check-circle {
             width: 7.938rem;
