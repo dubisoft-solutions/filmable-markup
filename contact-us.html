@@ -56,10 +56,13 @@
 
                 <div class="row justify-content-center">
                     <div class="col-xl-8 col-lg-10 col-12">
-                        <p class="text-body fw-medium fs-7 mb-3">We are here for you! How can we help?</p>
-                        <form class="row">
-                            <div class="col-lg-6 col-12 mb-3 text-start">
-                                <input type="email" class="form-control bg-dark" id="inputEmail" placeholder="Enter email: Example@playwing.com">
+                        <p class="text-body fw-medium fs-6 mb-3">We are here for you! How can we help?</p>
+                        <form id="accountForm" class="row needs-validation" novalidate>
+                            <div class="col-lg-6 col-12 mb-3 text-start position-relative">
+                                <input type="email" class="form-control bg-dark" id="inputEmail" placeholder="Enter email: Example@playwing.com" required>
+                                <div class="invalid-tooltip w-100 p-3 mt-2">
+                                    Please enter a valid email
+                                </div>
                             </div>
 
                             <div class="col-lg-6 col-12 col-lg-6 mb-4 text-start">
@@ -77,27 +80,27 @@
                             </div>
 
                             <div class="col-lg-6 col-12 py-2">
-                                <label for="textAttachment" class="form-label fw-medium fs-7 text-body mb-4">Attachment</label>
+                                <label for="textAttachment" class="form-label fw-medium fs-7 text-body mb-lg-4 mb-3">Attachment</label>
                                 <div class="d-flex align-items-center">
                                     <div>
                                         <button class="btn btn-dark btn-xs chose-attachment-file-btn">Choose files</button>
                                     </div>
                                     <div class="flex-grow-1">
-                                        <p class="text-muted ps-4 attachment-file-name fst-italic fs-7 text-truncate">No file chosen</p>
+                                        <p class="text-muted ps-4 attachment-file-name fst-italic fs-9 text-truncate">No file chosen</p>
                                         <input type="file" class="d-none" name="attachment-file" id="attachment-file-input">
                                     </div>
                                 </div>
                             </div>
 
                             <div class="col-lg-6 col-12 text-center mx-auto my-5 d-grid">
-                                <button type="button" class="btn btn-danger">Send</button>
+                                <button type="submit" class="btn btn-danger">Send</button>
                             </div>
                         </form>
-                        <div class="row justify-content-lg-center justify-content-start">
-                            <div class="col-lg-6 col-12 mb-3 text-start">
+                        <div class="row justify-content-lg-center justify-content-start mb-lg-0 mb-4">
+                            <div class="col-lg-6 col-12 pb-lg-0 pb-5 text-start">
                                 <label for="inputUser" class="form-label fw-medium fs-7 text-body mb-3">User</label>
                                 <div class="card bg-dark text-center">
-                                    <a href="#" class="text-body">Wi-fi User not detected</a>
+                                    <a href="#" class="text-body fs-8">Wi-fi User not detected</a>
                                 </div>
                             </div>
                         </div>
