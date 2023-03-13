@@ -6178,7 +6178,7 @@ textarea.form-control-lg {
   --bs-modal-padding: 1rem;
   --bs-modal-margin: 0.5rem;
   --bs-modal-color: ;
-  --bs-modal-bg: rgba(255, 255, 255, 0.9);
+  --bs-modal-bg: #FFFFEC;
   --bs-modal-border-color: var(--bs-border-color-translucent);
   --bs-modal-border-width: 1px;
   --bs-modal-border-radius: 0.438rem;
@@ -7051,7 +7051,7 @@ textarea.form-control-lg {
   --bs-offcanvas-padding-x: 1rem;
   --bs-offcanvas-padding-y: 1rem;
   --bs-offcanvas-color: ;
-  --bs-offcanvas-bg: rgba(255, 255, 255, 0.9);
+  --bs-offcanvas-bg: #FFFFEC;
   --bs-offcanvas-border-width: 1px;
   --bs-offcanvas-border-color: var(--bs-border-color-translucent);
   --bs-offcanvas-box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
@@ -15219,30 +15219,32 @@ textarea.form-control-lg {
 }
 
 .modal-backdrop {
-  background: rgba(36, 38, 50, 0.9);
+  background: rgba(22, 19, 19, 0.9);
 }
 .modal-backdrop.show {
   opacity: initial;
 }
 
-.modal-body {
-  padding: 80px 60px 70px 60px;
+.modal-dialog {
+  padding-top: 10rem;
+}
+.modal-dialog .modal-content {
+  padding: 3.75rem 1.5rem 2.75rem 1.5rem;
+}
+.modal-dialog .modal-content .btn-close {
+  top: 0;
+}
+.modal-dialog .modal-content .btn-close::before {
+  font-size: 0.5rem;
+}
+.modal-dialog .modal-content .btn-close:focus {
+  outline: 0;
+  box-shadow: none;
 }
 @media (max-width: 767.98px) {
-  .modal-body {
-    padding: 25px 20px;
+  .modal-dialog .modal-content {
+    padding: 2.313rem 1.5rem 1.5rem 1.5rem;
   }
-}
-@media (max-width: 767.98px) {
-  .modal-body .fs-2 {
-    font-size: 2.5rem !important;
-  }
-}
-
-.close-button {
-  position: absolute;
-  top: -3.75rem;
-  left: -2.188rem;
 }
 
 .alert-danger {
@@ -15910,6 +15912,7 @@ select.selectpicker {
 
 a {
   text-decoration: none;
+  cursor: pointer;
 }
 
 textarea {
