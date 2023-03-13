@@ -1,7 +1,8 @@
 .accordion-button {
     font-weight: 500;
-    font-size: 0.875rem;
-    line-height: 1.063rem;
+    font-size: 1.25rem;
+    line-height: 1.563rem;
+    border-radius: .5rem;
     &:focus {
         box-shadow: none;
     }
@@ -9,8 +10,19 @@
         @include icon-styles;
         content: icon-char(arrow-down);
         color: $yellow-236;
-        font-size: 1.5rem;
+        font-size: 2.188rem;
         background-image: none;
+        @include media-breakpoint-down(md) {
+            font-size: 1.5rem;
+        }
+    }
+    @include media-breakpoint-down(md) {
+        font-size: 0.875rem;
+        line-height: 1.063rem;
+        border-radius: .375rem;
+        --bs-accordion-btn-padding-x: 1rem;
+        --bs-accordion-btn-padding-y: 1.063rem;
+        --bs-accordion-inner-border-radius: .375rem;
     }
 }
 
@@ -43,6 +55,10 @@
 
 .accordion-body {
     color: $yellow-236;
-    font-size: 0.75rem;
-    padding: 0 1rem 15px 1rem;
+    font-size: 1.125rem;
+    padding: 0 2.25rem 1rem 2.25rem;
+    @include media-breakpoint-down(md) {
+        font-size: .75rem;
+        padding: 0 1rem 1rem 1rem;
+    }
 }

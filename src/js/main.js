@@ -46,7 +46,7 @@ function initRecaptcha(sitekey, containerSelector) {
 function initFormValidation() {
     const forms = document.querySelectorAll('.needs-validation')
     Array.from(forms).forEach(form => {
-        if (form.id == 'selectPinForm') {
+        if (form.id == 'accountForm') {
             form.addEventListener('submit', event => validateSubscribeUsForm(event, form));
         } else {
             form.addEventListener('submit', event => genericFormsValidation(event, form));

@@ -1,24 +1,26 @@
 .modal-backdrop {
-    background: rgba(36, 38, 50, 0.9);
+    background: rgba(22, 19, 19, 0.9);
     &.show {
         opacity: initial;
     }
 }
 
-.modal-body {
-    padding: 80px 60px 70px 60px;
-    @include media-breakpoint-down(md) {
-        padding: 25px 20px;
-    }
-    .fs-2 {
+.modal-dialog {
+    padding-top: 10rem;
+    .modal-content {
+        padding: 3.75rem 1.5rem 2.75rem 1.5rem;
+        .btn-close {
+            top: 0;
+            &::before {
+                font-size: .5rem;
+            }
+            &:focus {
+                outline: 0;
+                box-shadow: none;
+            }
+        }
         @include media-breakpoint-down(md) {
-            font-size: 2.5rem!important;
+            padding: 2.313rem 1.5rem 1.5rem 1.5rem;
         }
     }
-}
-
-.close-button {
-    position: absolute;
-    top: -3.75rem;
-    right: -2.188rem;
 }

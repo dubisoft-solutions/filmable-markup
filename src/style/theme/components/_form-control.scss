@@ -4,8 +4,11 @@
         font-family: 'Roboto';
         font-style: italic;
         font-weight: 300;
-        font-size: .875rem;
+        font-size: 1rem;
         color: $gray-158;
+        @include media-breakpoint-down(md) {
+            font-size: .875rem;
+        }
     }
     &:focus {
         box-shadow: none;
@@ -39,10 +42,12 @@
 .invalid-tooltip {
     background-color: $red-253;
     opacity: .95;
-    font-size: .625rem;
+    font-size: 1rem;
     color: $white;
     border-radius: .188rem;
-    position: relative;
+    @include media-breakpoint-down(md) {
+        font-size: .625rem;
+    }
 }
 
 .btn-close {

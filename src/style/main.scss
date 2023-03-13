@@ -20,7 +20,7 @@
                 font-size: .875rem!important;
             }
         }
-        .fs-3 {
+        .fs-4 {
             @include media-breakpoint-down(md) {
                 font-size: .875rem!important;
             }
@@ -30,9 +30,16 @@
         }
     }
     &.home {
-        .fs-4 {
+        .fs-5 {
             @include media-breakpoint-down(md) {
                 font-size: .75rem!important;
+            }
+        }
+        .card {
+            --bs-card-bg: none;
+            .card-img {
+                height: 13.5rem;
+                object-fit: contain;
             }
         }
     }
@@ -42,16 +49,38 @@
             margin-top: 2.938rem!important;
         }
     }
-    .category,
-    .account {
+    .category {
         margin: 8.875rem 0 6.688rem 0;
         @include media-breakpoint-down(md) {
             margin: 4.75rem 0 5.25rem 0;
         }
     }
     .account {
+        margin: 8.875rem 0 6.688rem 0;
+        @include media-breakpoint-down(md) {
+            margin: 4.75rem 0 0 0;
+        }
         .attachment-file-name {
             max-width: 10.5rem;
+        }
+        .card {
+            padding: 1.3rem 2.125rem;
+        }
+        .fs-5,
+        .fs-6 {
+            @include media-breakpoint-down(md) {
+                font-size: .875rem!important;
+            }
+        }
+        .fs-7 {
+            @include media-breakpoint-down(md) {
+                font-size: .875rem!important;
+            }
+        }
+        .fs-8 {
+            @include media-breakpoint-down(md) {
+                font-size: .875rem!important;
+            }
         }
     }
     .img-style {
@@ -111,7 +140,7 @@
     }
     .video-title-block {
         position: absolute;
-        bottom: 0;
+        bottom: 4rem;
         right: 0;
         left: 0;
         background: linear-gradient(180deg, rgba(28, 28, 28, 0) 0%, #1C1C1C 100%);
@@ -120,7 +149,7 @@
 }
 
 .main {
-    min-height: calc(82vh - 0px);
+    min-height: calc(80vh - 0px);
 }
 
 .thank-you {
@@ -185,7 +214,6 @@
     padding: 2.5rem 0 1.5rem 0;
     @include media-breakpoint-down(md) {
         padding: 1.5rem 0 .625rem 0;
-        background: transparent;
     }
     .list-inline {
         .list-inline-item {
