@@ -43,113 +43,125 @@
             }
         }
     }
-    .hero {
-        margin-top: 4.25rem;
-        @include media-breakpoint-down(md) {
-            margin-top: 2.938rem!important;
-        }
-    }
-    .category {
-        margin: 8.875rem 0 6.688rem 0;
-        @include media-breakpoint-down(md) {
-            margin: 4.75rem 0 5.25rem 0;
-        }
-    }
-    .account {
-        margin: 8.875rem 0 6.688rem 0;
-        @include media-breakpoint-down(md) {
-            margin: 4.75rem 0 0 0;
-        }
-        .attachment-file-name {
-            max-width: 10.5rem;
-        }
-        .card {
-            padding: 1.3rem 2.125rem;
-        }
-        .fs-5,
-        .fs-6 {
-            @include media-breakpoint-down(md) {
-                font-size: .875rem!important;
-            }
-        }
-        .fs-7 {
-            @include media-breakpoint-down(md) {
-                font-size: .875rem!important;
-            }
-        }
-        .fs-8 {
-            @include media-breakpoint-down(md) {
-                font-size: .875rem!important;
-            }
-        }
-    }
-    .img-style {
-        height: 32.875rem;
-        @include media-breakpoint-down(md) {
-            height: 18.75rem;
-        }
-    }
-    .card {
-        padding: .94rem 1.625rem;
-        border-radius: .375rem;
-    }
-    .img-size {
-        width: 12rem;
-        height: 15.625rem;
-        @include media-breakpoint-down(md) {
-            width: 6.25rem;
-            height: 8.125rem;
-        }
-    }
-    .text-copyright {
-        color: $gray-154;
-        font-size: .813rem;
-        @include media-breakpoint-down(md) {
-            font-size: .625rem;
-        }
-    }
-    .confirmation-title {
-        font-size: 1.25rem;
-        @include media-breakpoint-down(md) {
-            font-size: .875rem;
-        }
-    }
-    .play-btn {
-        width: 3rem;
-        height: 3rem;
-        background-color: $gray-70;
-        border: 2px solid $yellow-236;
-        .icon-style {
-            font-size: .875rem;
-        }
-    }
-    .list-items {
-        .list-item {
-            font-size: .938rem;
-            @include media-breakpoint-down(md) {
-                font-size: .75rem;
-            }
-        }
-    }
-    .video {
-        @include media-breakpoint-down(sm) {
-            .owl-stage {
-                left: -40px;
-            }
-        }
-    }
-    .video-title-block {
-        position: absolute;
-        bottom: 4rem;
-        right: 0;
-        left: 0;
-        background: linear-gradient(180deg, rgba(28, 28, 28, 0) 0%, #1C1C1C 100%);
-        padding: 2rem 1.5rem;
-    }
 }
 
 .main {
     min-height: calc(80vh - 0px);
+}
+
+.hero {
+    margin-top: 4.25rem;
+    @include media-breakpoint-down(md) {
+        margin-top: 2.938rem!important;
+    }
+}
+
+.category {
+    margin: 8.875rem 0 6.688rem 0;
+    @include media-breakpoint-down(md) {
+        margin: 4.75rem 0 5.25rem 0;
+    }
+}
+
+.account {
+    margin: 8.875rem 0 6.688rem 0;
+    @include media-breakpoint-down(md) {
+        margin: 4.75rem 0 0 0;
+    }
+    .attachment-file-name {
+        max-width: 10.5rem;
+    }
+    .card {
+        padding: 1.3rem 2.125rem;
+    }
+    .fs-5,
+    .fs-6 {
+        @include media-breakpoint-down(md) {
+            font-size: .875rem!important;
+        }
+    }
+    .fs-7 {
+        @include media-breakpoint-down(md) {
+            font-size: .875rem!important;
+        }
+    }
+    .fs-8 {
+        @include media-breakpoint-down(md) {
+            font-size: .875rem!important;
+        }
+    }
+}
+
+.img-style {
+    height: 32.875rem;
+    @include media-breakpoint-down(md) {
+        height: 18.75rem;
+    }
+}
+
+.img-size {
+    width: 12rem;
+    height: 15.625rem;
+    @include media-breakpoint-down(md) {
+        width: 6.25rem;
+        height: 8.125rem;
+    }
+}
+
+.text-copyright {
+    color: $gray-154;
+    font-size: .813rem;
+    @include media-breakpoint-down(md) {
+        font-size: .625rem;
+    }
+}
+
+.confirmation-title {
+    font-size: 1.25rem;
+    @include media-breakpoint-down(md) {
+        font-size: .875rem;
+    }
+}
+
+.play-btn {
+    width: 3rem;
+    height: 3rem;
+    background-color: $gray-70;
+    border: 2px solid $yellow-236;
+    .icon-style {
+        font-size: .875rem;
+    }
+}
+
+.list-items {
+    .list-item {
+        font-size: .938rem;
+        @include media-breakpoint-down(md) {
+            font-size: .75rem;
+        }
+    }
+}
+
+.card {
+    padding: .94rem 1.625rem;
+    border-radius: .375rem;
+}
+
+.video {
+    @include media-breakpoint-down(sm) {
+        .owl-stage {
+            left: -40px;
+        }
+    }
+}
+
+.video-title-block {
+    position: absolute;
+    bottom: 4rem;
+    right: 0;
+    left: 0;
+    background: linear-gradient(180deg, rgba(28, 28, 28, 0) 0%, #1C1C1C 100%);
+    padding: 2rem 1.5rem;
 }
 
 .thank-you {
