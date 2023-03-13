@@ -16969,6 +16969,17 @@ p {
 .play-btn .icon-style {
   font-size: 0.875rem;
 }
+.play-btn.play-block {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.play-btn.bg-blur {
+  background: rgba(136, 136, 136, 0.4);
+  backdrop-filter: blur(5px);
+}
 
 .list-items .list-item {
   font-size: 0.938rem;
