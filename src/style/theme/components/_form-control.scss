@@ -54,21 +54,19 @@
     }
 }
 
-.alert {
-    .btn-close {
-        background: none!important;
-        padding: 0;
-        opacity: 1;
-        position: absolute;
-        top: -6px;
-        right: 6px;
-        &::before {
-            @include icon-styles;
-            content: icon-char(close);
-            display: block;
-            font-size: .875rem;
-            color: $white;
-        }
+.btn-close {
+    background: none!important;
+    padding: 0;
+    opacity: 1;
+    position: absolute;
+    top: -6px;
+    right: 6px;
+    &::before {
+        @include icon-styles;
+        content: icon-char(close);
+        display: block;
+        font-size: .875rem;
+        color: $white;
     }
 }
 
