@@ -75,6 +75,42 @@
             }
         }
     }
+    &.white-select {
+        .dropdown-toggle.btn-light {
+            background-color: $light;
+            color: $black-14;
+            padding: .75rem 1.25rem;
+            &::after {
+                color: $black-14;
+            }
+            &.show,
+            &:active,
+            &:focus,
+            &:hover {
+                background-color: $light!important;
+                color: $black-14!important;
+            }
+        }
+        &>.dropdown-menu {
+            ul {
+                background-color: $light;
+                &.show {
+                    color: $black-14;
+                    background-color: $light;
+                }
+                .dropdown-item {
+                    color: $black-14;
+                    &.active,
+                    &:hover,
+                    &:focus {
+                        color: $yellow-236;
+                        background: linear-gradient(359.45deg, #C73F3B 0.32%, #F85A52 102.56%);
+                        opacity: 0.8;
+                    }
+                }
+            }
+        }
+    }
 }
 
 .bootstrap-select .bs-ok-default:after {

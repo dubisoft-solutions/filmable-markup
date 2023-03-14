@@ -13,6 +13,10 @@
     &:focus {
         box-shadow: none;
     }
+    &.contact {
+        $input-padding-y: 1.188rem;
+        $input-padding-y: 1rem;
+    }
 }
 
 .form-label {
@@ -33,7 +37,7 @@
             background-color: $gray-217;
             border-radius: .188rem;
             position: absolute;
-            top: .5rem;
+            top: .65rem;
             left: 3.125rem;
         }
     }
@@ -50,19 +54,42 @@
     }
 }
 
-.btn-close {
-    background: none!important;
-    padding: 0;
-    opacity: 1;
-    position: absolute;
-    top: -6px;
-    right: 6px;
-    &::before {
-        @include icon-styles;
-        content: icon-char(close);
-        display: block;
-        font-size: .875rem;
-        color: $white;
+.alert {
+    .btn-close {
+        background: none!important;
+        padding: 0;
+        opacity: 1;
+        position: absolute;
+        top: -6px;
+        right: 6px;
+        &::before {
+            @include icon-styles;
+            content: icon-char(close);
+            display: block;
+            font-size: .875rem;
+            color: $white;
+        }
+    }
+}
+
+form {
+    .btn-close {
+        background: $white!important;
+        width: .938rem;
+        height: .938rem;
+        border-radius: 50%;
+        padding: 0;
+        opacity: 1;
+        position: absolute;
+        top: -6px;
+        right: -.375rem;
+        &::before {
+            @include icon-styles;
+            content: icon-char(close);
+            display: block;
+            font-size: .313rem;
+            color: $red-253;
+        }
     }
 }
 
