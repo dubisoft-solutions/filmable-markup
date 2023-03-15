@@ -14,13 +14,32 @@
     }
     .owl-dots {
         position: absolute;
-        bottom: 5rem;
+        bottom: 1.5rem;
         left: 0;
         right: 0;
         .owl-dot {
             &.active {
                 background: $yellow-200!important;
             }
+        }
+        @include media-breakpoint-down(md) {
+            bottom: 1rem;
+        }
+    }
+}
+
+.video {
+    .owl-stage {
+        padding-bottom: 1rem;
+    }
+    @include media-breakpoint-down(sm) {
+        .owl-stage {
+            left: -40px;
+        }
+    }
+    @include media-breakpoint-up(lg) {
+        .owl-stage {
+            left: 0;
         }
     }
 }

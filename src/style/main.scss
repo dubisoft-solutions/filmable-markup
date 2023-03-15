@@ -24,14 +24,56 @@
                 font-size: .75rem!important;
             }
         }
-        .card {
-            --bs-card-bg: none;
-            .card-img {
-                height: 13.5rem;
-                object-fit: contain;
+        .video-preview {
+            display: block;
+            height: 30.5rem;
+            object-fit: cover;
+            width: auto;
+            padding: 0;
+            &::before {
+                content: "";
+                position: absolute;
+                height: 50%;
+                width: 100%;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background: linear-gradient(180deg, rgba(28, 28, 28, 0) 0%, #1C1C1C 100%);
+                z-index: 1;
+                @include media-breakpoint-down(md) {
+                    bottom: 0;
+                }
+            }
+            @include media-breakpoint-down(md) {
+                height: 12.813rem;
+                border-radius: .313rem;
+            }
+            img {
+                height: 30.5rem;
+                object-fit: cover;
+                @include media-breakpoint-down(md) {
+                    height: 12.813rem;
+                    border-radius: .313rem;
+                }
+            }
+        }
+        .video-info {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 3.5rem;
+            color: $yellow-200;
+            text-align: center;
+            z-index: 1;
+            @include media-breakpoint-down(md) {
+                bottom: 2rem;
             }
         }
     }
+}
+
+.main {
+    min-height: calc(83vh - 0px);
 }
 
 .landing-title {
@@ -44,10 +86,6 @@
             font-size: 1.25rem!important;
         }
     }
-}
-
-.main {
-    min-height: calc(83vh - 0px);
 }
 
 .hero {
@@ -100,13 +138,90 @@
     }
 }
 
-.img-size {
-    width: 12rem;
-    height: 15.625rem;
+.img-lg {
+    width: 100%;
+    max-height: 25.313rem;
+    border-radius: 1.813rem;
+    object-fit: contain;
     @include media-breakpoint-down(md) {
-        width: 6.25rem;
-        height: 8.125rem;
+        max-height: 19.875rem;
+        border-radius: 1.375rem;
     }
+}
+
+.img-sm {
+    border-radius: .375rem;
+    width: 100%;
+    max-height: 17.5rem;
+    object-fit: contain;
+    @include media-breakpoint-down(md) {
+        max-height: 10rem;
+        border-radius: .188rem;
+    }
+}
+
+.item-preview {
+    display: block;
+    height: 17.5rem;
+    border-radius: .375rem;
+    object-fit: cover;
+    width: auto;
+    padding: 0;
+    &::before {
+        content: "";
+        position: absolute;
+        height: 50%;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(1deg, #1A1A1A 22.21%, rgba(16, 21, 44, 0) 94.42%);
+        z-index: 1;
+        @include media-breakpoint-down(md) {
+            bottom: .5rem;
+        }
+    }
+    @include media-breakpoint-down(md) {
+        height: 10rem;
+    }
+}
+
+.info {
+    position: absolute;
+    left: .5rem;
+    bottom: 1.5rem;
+    color: $yellow-200;
+    text-align: left;
+    z-index: 1;
+    @include media-breakpoint-down(md) {
+        left: .25rem;
+        bottom: 2.125rem;
+    }
+}
+
+.item-progress {
+    position: absolute;
+    left: 0;
+    bottom: -1rem;
+    text-align: left;
+    z-index: 1;
+    background: $black-36;
+    border-radius: .5rem;
+    padding: 1rem .625rem;
+    @include media-breakpoint-down(md) {
+        border-radius: .313rem;
+        padding: .625rem .375rem;
+        bottom: .5rem;
+    }
+}
+
+.two-lines-ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
 }
 
 .text-copyright {
@@ -128,11 +243,48 @@
     width: 3rem;
     height: 3rem;
     background-color: $gray-70;
-    border: 2px solid $yellow-236;
+    border: 3px solid $yellow-236;
     .icon-style {
-        font-size: .875rem;
+        font-size: 1.25rem;
+    }
+    &.btn-md {
+        width: 5.125rem;
+        height: 5.125rem;
+        .icon-style {
+            font-size: 2.188rem;
+            @include media-breakpoint-down(md) {
+                font-size: 1.688rem;
+            }
+        }
+        @include media-breakpoint-down(md) {
+            width: 4rem;
+            height: 4rem;
+        }
+    }
+    &.btn-sm {
+        width: 5.125rem;
+        height: 5.125rem;
+        .icon-style {
+            font-size: 2.188rem;
+            @include media-breakpoint-down(md) {
+                font-size: 1.25rem;
+            }
+        }
+        @include media-breakpoint-down(md) {
+            width: 3rem;
+            height: 3rem;
+        }
     }
     &.play-block {
+        position: absolute;
+        top: 4.625rem;
+        right: 0;
+        left: 0;
+        @include media-breakpoint-down(md) {
+            top: 2.5rem;
+        }
+    }
+    &.play-block-center {
         position: absolute;
         top: 0;
         bottom: 0;
@@ -143,37 +295,14 @@
         background: rgba(136, 136, 136, 0.4);
         backdrop-filter: blur(5px);
     }
-}
-
-.list-items {
-    .list-item {
-        font-size: .938rem;
-        @include media-breakpoint-down(md) {
-            font-size: .75rem;
-        }
+    @include media-breakpoint-down(md) {
+        border-width: 2px;
     }
 }
 
 .card {
     padding: .94rem 1.625rem;
     border-radius: .375rem;
-}
-
-.video {
-    @include media-breakpoint-down(sm) {
-        .owl-stage {
-            left: -40px;
-        }
-    }
-}
-
-.video-title-block {
-    position: absolute;
-    bottom: 4rem;
-    right: 0;
-    left: 0;
-    background: linear-gradient(180deg, rgba(28, 28, 28, 0) 0%, #1C1C1C 100%);
-    padding: 2rem 1.5rem;
 }
 
 .thank-you {
@@ -238,11 +367,6 @@
     }
 }
 
-form {
-    display: flex;
-    justify-content: center;
-}
-
 .input-pin {
     input {
         margin: 0 .375rem;
@@ -253,21 +377,6 @@ form {
         font-size: 1.25rem;
         border-radius: 4px;
         border: 0;
-    }
-    .special {
-        margin-top: 2rem;
-        font-size: 2rem;
-        opacity: 1;
-        visibility: visible;
-        transition: all 0.3s ease;
-        i {
-            font-size: 1rem;
-            cursor: pointer;
-        }
-        &.hidden {
-            opacity: 0;
-            visibility: hidden;
-        }
     }
 }
 

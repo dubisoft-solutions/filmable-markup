@@ -68,6 +68,9 @@
         font-size: .875rem;
         color: $white;
     }
+    &:hover {
+        opacity: 1;
+    }
 }
 
 form {
