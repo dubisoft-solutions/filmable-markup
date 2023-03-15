@@ -111,7 +111,7 @@ $(function() {
             loop: true,
             margin: 10,
             responsiveClass: true,
-            autoplay: true,
+            autoplay: false,
             autoplayTimeout: 3000,
             nav: false,
             dots: false,
@@ -148,6 +148,10 @@ $(function() {
 
             responsive: {
                 0: {
+                    items: 1,
+                    stagePadding: 25
+                },
+                576: {
                     items: 1
                 }
             }
