@@ -79,3 +79,17 @@ textarea {
         font-size: .75!important;
     }
 }
+
+.fs-13 {
+    @include media-breakpoint-down(md) {
+        font-size: .375!important;
+    }
+}
+
+.font-monospace-md {
+    letter-spacing: 2.5px;
+}
+
+.font-monospace-sm {
+    letter-spacing: 1.3px;
+}

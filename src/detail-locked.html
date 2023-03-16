@@ -2,7 +2,7 @@
 <html lang="lv">
 //= html_partials/head.html
 
-<body class="index detail position-relative">
+<body class="index home detail position-relative">
     <main>
         <!-- Header -->
         //= html_partials/header.html
@@ -10,8 +10,21 @@
         <!-- Main section -->
         <div class="main">
             <div class="hero pb-4">
-                <div class="container-fluid px-0 mb-lg-3 mb-4">
-                    <img src="img/landing-img.gif" alt="Image" class="w-100 object-fit-img img-style">
+                <div class="container-fluid px-0 mb-lg-3 mb-4 position-relative">
+                    <span class="video-preview blur">
+                        <img src="img/landing-img.gif" alt="Image" class="w-100 object-fit-img img-style">
+                    </span>
+                    <span class="video-info">
+                        <p class="fs-13 fw-bold font-monospace-sm mb-3 text-uppercase">this content is locked </p>
+                        <span><icon class="icon icon-key text-white fs-5"></icon></span>
+                    <p class="fs-11 font-monospace-md fw-bold text-uppercase my-3">
+                        GET FULL ACCESS TO <span class="d-block">Filmable, more than 50</span> documentaries to watch!</p>
+
+                    <div class="px-5">
+                        <a href="confirmation.html" class="btn btn-danger btn-sm d-flex justify-content-center align-items-center mb-2"><span class="d-grid me-2"><img src="img/play.svg" alt="Play"></span>Watch now</a>
+                    </div>
+
+                    </span>
                 </div>
                 <div class="container px-4 px-lg-0">
                     <div class="row align-items-center mb-lg-5 mb-0 pb-lg-3 pb-0">

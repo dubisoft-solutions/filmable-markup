@@ -89,7 +89,7 @@
         background: $black-33;
         .detail-bg-main {
             position: absolute;
-            top: -2.938rem;
+            top: -3.938rem;
             width: 100%;
             z-index: -2;
             background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #1A1A1A;
@@ -101,6 +101,9 @@
                 @include media-breakpoint-down(md) {
                     height: 20.438rem;
                 }
+            }
+            @include media-breakpoint-down(md) {
+                top: -2.938rem;
             }
         }
         .top-hero-decor {
@@ -117,6 +120,20 @@
                 z-index: -1;
                 border-top-left-radius: 2.313rem;
                 border-top-right-radius: 2.313rem;
+            }
+        }
+        .video-preview {
+            &::before {
+                content: "";
+                background: linear-gradient(359.11deg, #000000 18.9%, rgba(33, 33, 33, 0) 92.76%);
+            }
+            &.blur {
+                filter: blur(2.5px);
+            }
+        }
+        .video-info {
+            @include media-breakpoint-down(md) {
+                bottom: 0;
             }
         }
     }
