@@ -71,6 +71,21 @@
         }
     }
     &.detail {
+        .fs-2 {
+            @include media-breakpoint-down(md) {
+                font-size: 1.25rem!important;
+            }
+        }
+        .fs-6 {
+            @include media-breakpoint-down(md) {
+                font-size: 1.188rem!important;
+            }
+        }
+        .fs-8 {
+            @include media-breakpoint-down(md) {
+                font-size: .875rem!important;
+            }
+        }
         background: $black-33;
         .detail-bg-main {
             position: absolute;
