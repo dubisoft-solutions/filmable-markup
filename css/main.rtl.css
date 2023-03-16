@@ -17016,6 +17016,21 @@ p {
 .index.detail {
   background: #212121;
 }
+@media (max-width: 767.98px) {
+  .index.detail .fs-2 {
+    font-size: 1.25rem !important;
+  }
+}
+@media (max-width: 767.98px) {
+  .index.detail .fs-6 {
+    font-size: 1.188rem !important;
+  }
+}
+@media (max-width: 767.98px) {
+  .index.detail .fs-8 {
+    font-size: 0.875rem !important;
+  }
+}
 .index.detail .detail-bg-main {
   position: absolute;
   top: -2.938rem;
