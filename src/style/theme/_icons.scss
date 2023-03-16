@@ -36,8 +36,9 @@ $icon-name-menu: "\E008";
 $icon-name-next: "\E009"; 
 $icon-name-play-v2: "\E00A"; 
 $icon-name-play: "\E00B"; 
-$icon-name-prev: "\E00C"; 
-$icon-name-recording: "\E00D"; 
+$icon-name-plus: "\E00C"; 
+$icon-name-prev: "\E00D"; 
+$icon-name-recording: "\E00E"; 
 
 
 @function icon-char($filename) {
@@ -76,11 +77,14 @@ $icon-name-recording: "\E00D";
 	@if $filename == play {
 		$char: "\E00B";
 	}
-	@if $filename == prev {
+	@if $filename == plus {
 		$char: "\E00C";
 	}
-	@if $filename == recording {
+	@if $filename == prev {
 		$char: "\E00D";
+	}
+	@if $filename == recording {
+		$char: "\E00E";
 	}
 
 	@return $char;
@@ -129,6 +133,9 @@ $icon-name-recording: "\E00D";
 }
 .icon-play {
 	@include icon(play);
+}
+.icon-plus {
+	@include icon(plus);
 }
 .icon-prev {
 	@include icon(prev);

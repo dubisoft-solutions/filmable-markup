@@ -116,6 +116,26 @@ $(function() {
 });
 
 $(function() {
+    if ($('.detail-video .owl-carousel').length > 0) {
+        $('.detail-video .owl-carousel').owlCarousel({
+            loop: true,
+            margin: 10,
+            responsiveClass: true,
+            autoplay: false,
+            autoplayTimeout: 3000,
+            nav: false,
+            dots: false,
+
+            responsive: {
+                0: {
+                    items: 3
+                }
+            }
+        })
+    }
+});
+
+$(function() {
     if ($('.hero .owl-carousel').length > 0) {
         $('.hero .owl-carousel').owlCarousel({
             loop: true,

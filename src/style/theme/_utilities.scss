@@ -68,13 +68,13 @@ textarea {
     }
 }
 
-.fs-5 {
+.fs-7 {
     @include media-breakpoint-down(md) {
         font-size: .875rem!important;
     }
 }
 
-.fs-9 {
+.fs-11 {
     @include media-breakpoint-down(md) {
         font-size: .75!important;
     }

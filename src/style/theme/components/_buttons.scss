@@ -90,4 +90,10 @@
             font-size: .875rem;
         }
     }
+    &.btn-xs {
+        font-size: .975rem;
+        @include media-breakpoint-down(md) {
+            font-size: .875rem;
+        }
+    }
 }
