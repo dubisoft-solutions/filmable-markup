@@ -120,6 +120,9 @@
                 z-index: -1;
                 border-top-left-radius: 2.313rem;
                 border-top-right-radius: 2.313rem;
+                @include media-breakpoint-up(sm) {
+                    display: none;
+                }
             }
         }
         .video-preview {
