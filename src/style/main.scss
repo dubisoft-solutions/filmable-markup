@@ -101,6 +101,9 @@
                 @include media-breakpoint-down(md) {
                     height: 20.438rem;
                 }
+                @include media-breakpoint-between(lg, xl) {
+                    height: 23.5rem;
+                }
             }
             @include media-breakpoint-down(md) {
                 top: -2.938rem;
