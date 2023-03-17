@@ -15646,6 +15646,17 @@ form .btn-close::before {
   margin-top: 0.125rem;
 }
 
+.input-pin-control input {
+  margin: 0 0.375rem;
+  padding: 0.25rem;
+  width: 33px;
+  height: 35px;
+  text-align: center;
+  font-size: 1.25rem;
+  border-radius: 4px;
+  border: 0;
+}
+
 .navbar {
   --navbar-height: 4.25rem;
   background: transparent;
@@ -17196,19 +17207,19 @@ p {
 .img-sm {
   border-radius: 1.25rem;
   width: 100%;
-  max-height: 17.5rem;
+  min-height: 17.5rem;
   object-fit: contain;
 }
 @media (max-width: 767.98px) {
   .img-sm {
-    max-height: 10rem;
+    min-height: 10rem;
     border-radius: 0.313rem;
   }
 }
 
 .item-preview {
   display: block;
-  height: 17.5rem;
+  min-height: 17.5rem;
   border-radius: 0.375rem;
   object-fit: cover;
   width: auto;
@@ -17232,7 +17243,7 @@ p {
 }
 @media (max-width: 767.98px) {
   .item-preview {
-    height: 10rem;
+    min-height: 10rem;
   }
 }
 
@@ -17265,7 +17276,7 @@ p {
   .item-progress {
     border-radius: 0.313rem;
     padding: 0.625rem 0.375rem;
-    bottom: 0.5rem;
+    bottom: 0;
   }
 }
 
@@ -17443,17 +17454,6 @@ p {
 }
 .thank-you .pt-6 {
   padding-top: 8rem !important;
-}
-
-.input-pin-control input {
-  margin: 0 0.375rem;
-  padding: 0.25rem;
-  width: 33px;
-  height: 35px;
-  text-align: center;
-  font-size: 1.25rem;
-  border-radius: 4px;
-  border: 0;
 }
 
 .footer {
