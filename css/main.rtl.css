@@ -15540,19 +15540,6 @@ textarea.form-control-lg {
   right: 3.125rem;
 }
 
-.invalid-tooltip {
-  background-color: #FD5732;
-  opacity: 0.95;
-  font-size: 1rem;
-  color: #FFFFFF;
-  border-radius: 0.188rem;
-}
-@media (max-width: 767.98px) {
-  .invalid-tooltip {
-    font-size: 0.625rem;
-  }
-}
-
 .btn-close {
   background: none !important;
   padding: 0;
@@ -17437,7 +17424,7 @@ p {
 }
 @media (max-width: 767.98px) {
   .thank-you main .check-circle .icon-style {
-    font-size: 2.25rem;
+    font-size: 2.813rem;
   }
 }
 @media (max-width: 767.98px) {
