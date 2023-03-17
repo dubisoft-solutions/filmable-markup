@@ -29,7 +29,6 @@ animateIn:!1},e.prototype.swap=function(){if(1===this.core.settings.items&&a.sup
 
 $(function() {
     initSelectPicker();
-    initRecaptcha('6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI', ".grecaptcha");
     initFormValidation();
     addScrolledClassToNavbarOnScroll();
 });
@@ -49,18 +48,6 @@ function initSelectPicker() {
             }
         })
     });
-}
-
-function initRecaptcha(sitekey, containerSelector) {
-    const recaptchaContainers = document.querySelectorAll(containerSelector);
-    recaptchaContainers.forEach(recaptchaContainer => {
-        // If reCAPTCHA is still loading, grecaptcha will be undefined.
-        grecaptcha.ready(function() {
-            grecaptcha.render(recaptchaContainer, {
-                sitekey: sitekey
-            });
-        });
-    })
 }
 
 function initFormValidation() {
@@ -265,21 +252,37 @@ $(function() {
 /**
  * Wifi PIN
  */
-const inputs = document.querySelectorAll("input");
+const inputs = document.querySelectorAll(".input-pin-control .pin-input");
 const codeBlock = document.getElementById("code-block");
 const code = document.getElementById("code");
 const form = document.querySelector("accountForm");
 
 inputs.forEach((input, key) => {
-    if (key !== 0) {
-        input.addEventListener("click", function() {
-            inputs[0].focus();
-        });
-    }
-    input.addEventListener("keyup", function() {
+    input.addEventListener("click", function() {
+        let inputFocuced = false;
+        for (let key = 0; key < inputs.length; key++) {
+            let input = inputs[key];
+            if (!input.value) {
+                inputs[key].focus();
+                inputFocuced = true;
+                break;
+            }
+        }
+        if (!inputFocuced) {
+            inputs[inputs.length - 1].focus();
+        }
+    });
+    input.addEventListener("keydown", function(event) {
+        if (event.keyCode == 8) {
+            if (!input.value) {
+                inputs[key - 1].focus();
+            }
+        }
+    })
+    input.addEventListener("keyup", function(event) {
+        console.log(event.keyCode);
         if (input.value) {
             if (key === 3) {
-                // Last one tadaa
                 const userCode = [...inputs].map((input) => input.value).join("");
                 codeBlock.classList.remove("hidden");
                 code.innerText = userCode;

@@ -30,10 +30,10 @@
                 <div class="container px-4 px-lg-0">
                     <form id="accountForm" class="row justify-content-center g-3 needs-validation pt-5 mt-5 pb-lg-5 pb-5" novalidate>
                         <div class="col-lg-7 col-11 text-center pt-5 mt-4 pb-3">
-                            <div class="input-group has-validation">
+                            <div class="input-group">
                                 <span class="input-group-text divide">+34</span>
                                 <input type="text" class="form-control" aria-label="Enter Phone number" placeholder="Enter Phone number" required>
-                                <span class="input-group-text bg-success"><icon class="icon icon-check fs-9 text-white"></icon></span>
+                                <span class="input-group-text bg-success"><icon class="icon icon-check fs-9 text-white d-grid"></icon></span>
                                 <div class="invalid-tooltip w-100 p-3 mt-2">
                                     Please enter a valid phone number *
                                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
@@ -44,14 +44,15 @@
                             <label for="inputPinLabel" class="form-label font-family-second fw-bold text-white mb-4">Enter PIN</label>
                             <div class="d-flex justify-content-center align-items-center">
                                 <span class="me-2"><icon class="icon icon-key text-white"></icon></span>
-                                <div class="input-pin d-flex">
-                                    <input type="password" maxlength=1 />
-                                    <input type="password" maxlength=1 />
-                                    <input type="password" maxlength=1 />
-                                    <input type="password" maxlength=1 />
+                                <div class="input-pin-control d-flex">
+                                    <input type="password" maxlength=1 class="pin-input" required />
+                                    <input type="password" maxlength=1 class="pin-input" required />
+                                    <input type="password" maxlength=1 class="pin-input" required />
+                                    <input type="password" maxlength=1 class="pin-input" required />
                                 </div>
                                 <div class="invalid-tooltip w-100 p-3 mt-2">
                                     PIN does not match, please enter the PIN received by SMS or press re-send SMS with PIN* (below)
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                                 </div>
                             </div>
                         </div>
