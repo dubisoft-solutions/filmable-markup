@@ -108,7 +108,43 @@ $(function() {
                     items: 2,
                     stagePadding: 80
                 },
+                414: {
+                    items: 3
+                },
+                768: {
+                    items: 4
+                },
+                992: {
+                    items: 5
+                },
                 1200: {
+                    items: 6
+                }
+            }
+        })
+    }
+});
+
+$(function() {
+    if ($('.video-detail .owl-carousel').length > 0) {
+        $('.video-detail .owl-carousel').owlCarousel({
+            loop: true,
+            margin: 10,
+            responsiveClass: true,
+            autoplay: false,
+            autoplayTimeout: 3000,
+            nav: false,
+            dots: false,
+
+            responsive: {
+                0: {
+                    items: 2,
+                    stagePadding: 80
+                },
+                991: {
+                    items: 3
+                },
+                992: {
                     items: 3
                 }
             }
