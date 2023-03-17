@@ -1,0 +1,64 @@
+.accordion-button {
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 1.563rem;
+    border-radius: .5rem;
+    &:focus {
+        box-shadow: none;
+    }
+    &::after {
+        @include icon-styles;
+        content: icon-char(arrow-down);
+        color: $yellow-236;
+        font-size: 2.188rem;
+        background-image: none;
+        @include media-breakpoint-down(md) {
+            font-size: 1.5rem;
+        }
+    }
+    @include media-breakpoint-down(md) {
+        font-size: 0.875rem;
+        line-height: 1.063rem;
+        border-radius: .375rem;
+        --bs-accordion-btn-padding-x: 1rem;
+        --bs-accordion-btn-padding-y: 1.063rem;
+        --bs-accordion-inner-border-radius: .375rem;
+    }
+}
+
+.accordion-button:not(.collapsed) {
+    color: $red-62;
+    box-shadow: none;
+}
+
+.accordion-button:not(.collapsed)::after {
+    background-image: none;
+    margin-top: -7px;
+}
+
+.accordion-item {
+    background: $black-43;
+    border-radius: 0.438rem;
+    border: none;
+    &:first-of-type {
+        border-top-left-radius: 0.438rem;
+        border-top-right-radius: 0.438rem;
+    }
+    &:last-of-type {
+        border-bottom-right-radius: 0.438rem;
+        border-bottom-left-radius: 0.438rem;
+    }
+    &.accordion-collapse.collapse.show {
+        background: $black-43;
+    }
+}
+
+.accordion-body {
+    color: $yellow-236;
+    font-size: 1.125rem;
+    padding: 0 2.25rem 1rem 2.25rem;
+    @include media-breakpoint-down(md) {
+        font-size: .75rem;
+        padding: 0 1rem 1rem 1rem;
+    }
+}

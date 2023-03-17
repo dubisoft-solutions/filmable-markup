@@ -25,42 +25,66 @@ $font-icons-family-name: "IconsFont";
 	@include icon-styles;
 }
 
-$icon-name-check: "\E001"; 
-$icon-name-close: "\E002"; 
-$icon-name-key: "\E003"; 
-$icon-name-menu: "\E004"; 
-$icon-name-next: "\E005"; 
-$icon-name-play-v2: "\E006"; 
-$icon-name-play: "\E007"; 
-$icon-name-prev: "\E008"; 
+$icon-name-1080hd: "\E001"; 
+$icon-name-arrow-down: "\E002"; 
+$icon-name-arrow-right: "\E003"; 
+$icon-name-check: "\E004"; 
+$icon-name-close: "\E005"; 
+$icon-name-closed-caption-subtitles: "\E006"; 
+$icon-name-key: "\E007"; 
+$icon-name-menu: "\E008"; 
+$icon-name-next: "\E009"; 
+$icon-name-play-v2: "\E00A"; 
+$icon-name-play: "\E00B"; 
+$icon-name-plus: "\E00C"; 
+$icon-name-prev: "\E00D"; 
+$icon-name-recording: "\E00E"; 
 
 
 @function icon-char($filename) {
 	$char: "";
 
-	@if $filename == check {
+	@if $filename == 1080hd {
 		$char: "\E001";
 	}
-	@if $filename == close {
+	@if $filename == arrow-down {
 		$char: "\E002";
 	}
-	@if $filename == key {
+	@if $filename == arrow-right {
 		$char: "\E003";
 	}
-	@if $filename == menu {
+	@if $filename == check {
 		$char: "\E004";
 	}
-	@if $filename == next {
+	@if $filename == close {
 		$char: "\E005";
 	}
-	@if $filename == play-v2 {
+	@if $filename == closed-caption-subtitles {
 		$char: "\E006";
 	}
-	@if $filename == play {
+	@if $filename == key {
 		$char: "\E007";
 	}
-	@if $filename == prev {
+	@if $filename == menu {
 		$char: "\E008";
+	}
+	@if $filename == next {
+		$char: "\E009";
+	}
+	@if $filename == play-v2 {
+		$char: "\E00A";
+	}
+	@if $filename == play {
+		$char: "\E00B";
+	}
+	@if $filename == plus {
+		$char: "\E00C";
+	}
+	@if $filename == prev {
+		$char: "\E00D";
+	}
+	@if $filename == recording {
+		$char: "\E00E";
 	}
 
 	@return $char;
@@ -77,11 +101,23 @@ $icon-name-prev: "\E008";
 	}
 }
 
+.icon-1080hd {
+	@include icon(1080hd);
+}
+.icon-arrow-down {
+	@include icon(arrow-down);
+}
+.icon-arrow-right {
+	@include icon(arrow-right);
+}
 .icon-check {
 	@include icon(check);
 }
 .icon-close {
 	@include icon(close);
+}
+.icon-closed-caption-subtitles {
+	@include icon(closed-caption-subtitles);
 }
 .icon-key {
 	@include icon(key);
@@ -98,6 +134,12 @@ $icon-name-prev: "\E008";
 .icon-play {
 	@include icon(play);
 }
+.icon-plus {
+	@include icon(plus);
+}
 .icon-prev {
 	@include icon(prev);
+}
+.icon-recording {
+	@include icon(recording);
 }

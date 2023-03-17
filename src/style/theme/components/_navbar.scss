@@ -2,7 +2,7 @@ $navbar-height: 4.25rem;
 $navbar-height-sm: 2.938rem;
 .navbar {
     --navbar-height: #{$navbar-height};
-    background: $black-26;
+    background: transparent;
     border: none;
     padding: 0;
     min-height: 4.25rem;
@@ -21,12 +21,8 @@ $navbar-height-sm: 2.938rem;
     min-height: var(--navbar-height);
     &.navbar-expand .navbar-nav {
         .dropdown-toggle {
-            font-size: 1.5rem;
             color: $yellow-236;
             padding: 0;
-            @include media-breakpoint-down(md) {
-                font-size: 1.125rem;
-            }
             .dropdown-icon-open {
                 display: none;
             }
@@ -46,13 +42,16 @@ $navbar-height-sm: 2.938rem;
                     bottom: 0;
                     left: 0;
                     right: 0;
-                    background: rgba(25, 22, 38, 0.8);
+                    background: rgba(22, 19, 19, 0.9);
                     content: '';
                     z-index: 1;
                 }
             }
             &::after {
                 display: none;
+            }
+            &:focus {
+                outline: none;
             }
         }
         .dropdown-menu {
@@ -116,6 +115,18 @@ $navbar-height-sm: 2.938rem;
                     opacity: .8;
                 }
             }
+            @include media-breakpoint-between(sm,
+            lg) {
+                position: absolute;
+                top: 1.75rem;
+            }
+            @include media-breakpoint-up(lg) {
+                position: absolute;
+                top: 2.5rem;
+            }
         }
+    }
+    &.scrolled {
+        background-color: $black-26;
     }
 }

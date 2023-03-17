@@ -9,11 +9,12 @@ $yellow-236: #FFFFEC;
 $yellow-200: #FFFFEF;
 $yellow-226: #F1F1E2;
 $green: #29D884;
-$pink-62: #FF3E3E;
+$red-62: #FF3E3E;
 $red-244: #F45733;
 $red-242: #F25531;
 $red-243: #F35632;
 $red-253: #FD5732;
+$red-233: #E9514B;
 $gray-217: #D9D9D9;
 $gray-219: #DBDBDB;
 $gray-201: #C9C9C9;
@@ -30,8 +31,10 @@ $black-43: #2B2B2B;
 $black-33: #212121;
 $black-25: #090919;
 $black-20: #141414;
-$black-26: #1A1A1A;
+$black-26: #131313;
 $black-7: #070707;
+$black-3: #030101;
+$black-36: #242424;
 $black-14: #0C030E;
 $gradient-red: linear-gradient(359.45deg, #C73F3B 0.32%, #F85A52 102.56%);
 $gradient-gray: linear-gradient(180deg, #797C7B 0%, #797C7B 100%);
@@ -46,14 +49,15 @@ $h4-font-size: 2rem;
 $h5-font-size: 1.313rem;
 $headings-line-height: 1;
 $headings-font-weight: 700;
+$headings-color: $yellow-226;
 $font-weight-medium: 500;
-$font-sizes: ( 1: 2.5rem, 2: 2.25rem, 3: 1.5rem, 4: 1.125rem, 5: .938rem);
+$font-sizes: ( 1: 5rem, 2: 2.75rem, 3: 2.5rem, 4: 2.25rem, 5: 2rem, 6: 1.625rem, 7: 1.5rem, 8: 1.25rem, 9: 1.125rem, 10: 1rem, 11: .938rem, 12: .875rem, 13: .75rem);
 $spacer: 1rem;
-$spacers: ( 0: 0, 1: $spacer * .25, 2: $spacer * .5, 3: $spacer, 4: $spacer * 1.5, 5: $spacer * 3, 6: $spacer * 10);
+$spacers: ( 0: 0, 1: $spacer * .25, 2: $spacer * .5, 3: $spacer, 4: $spacer * 1.5, 5: $spacer * 3, 6: $spacer * 10, 7: 12.313rem);
 // break points
 $grid-breakpoints: (xxc:0, xs: 390px, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1440px, xxxl: 1548px, xxxxl: 1920px, xxxxxl: 2560px);
 // containers
-$container-max-widths: (xc: 355px, sm: 540px, md: 720px, lg: 960px, xl: 1140px, xxl: 1267px, xxxl: 1375px, xxxxl: 1747px, xxxxxl: 2387px);
+$container-max-widths: (xc: 100%, sm: 540px, md: 720px, lg: 960px, xl: 1140px, xxl: 1267px, xxxl: 1375px, xxxxl: 1747px, xxxxxl: 2387px);
 // box-shadow
 $box-shadow: 0px 4.32166px 4.32166px rgba(0, 0, 0, 0.25),
 inset 0px 4.32166px 21.6083px rgba(0, 0, 0, 0.14) !default;
@@ -62,27 +66,31 @@ $border-radius-md: 2.75rem!default;
 $border-radius-lg: 6.375rem!default;
 // buttons
 $btn-font-weight: 500;
+$btn-font-size: 1.5rem;
+$btn-padding-x: 2rem;
+$btn-padding-y: .875rem;
+$bs-btn-border-radius: .75rem;
 $btn-color: $white!default;
 // dropdown
 $dropdown-padding-x: 0;
 $dropdown-padding-y: .625rem;
 $dropdown-item-padding-y: .813rem;
 $dropdown-item-padding-x: 2.5rem;
-$dropdown-border-radius: .313rem;
+$dropdown-border-radius: .75rem;
 $dropdown-font-size: 1rem;
 $dropdown-bg: transparent!default;
 $dropdown-color: $yellow-226!default;
 $dropdown-link-color: $yellow-226;
 $dropdown-link-hover-color: $yellow-226;
 // form-control
-$input-font-size: 1.25rem;
+$input-font-size: .875rem;
 $input-line-height: 1;
 $input-font-weight: 500;
 $input-color: $gray-90;
 $input-bg: $light;
 $input-border-color: $light;
-$input-padding-y: .685rem;
-$input-padding-x: .875rem;
+$input-padding-y: .813rem;
+$input-padding-x: 1rem;
 $input-group-addon-color: $light;
 $input-group-addon-border-color: transparent;
 $input-group-addon-bg: transparent;
@@ -90,3 +98,20 @@ $form-feedback-invalid-color: $red-253;
 $form-feedback-font-size: .625rem;
 $input-box-shadow: none;
 $input-focus-box-shadow: none;
+// accordion
+$accordion-bg: $black-43;
+$accordion-color: $yellow-236;
+$accordion-border-radius: .5rem;
+$accordion-border-color: $black-43;
+$accordion-button-active-bg: $black-43;
+$accordion-button-active-color: $yellow-236;
+$accordion-padding-y: 1.688rem;
+$accordion-padding-x: 2.25rem;
+// progress 
+$progress-bg: $black-3;
+$progress-border-radius: 4rem;
+$progress-bar-bg: $red-233;
+// modal
+$modal-content-border-radius: .438rem;
+$modal-content-bg: $yellow-236;
+$modal-box-shadow: 0px 3.3875px 0px rgba(0, 0, 0, 0.25);

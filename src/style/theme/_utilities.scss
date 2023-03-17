@@ -4,6 +4,7 @@
 
 a {
     text-decoration: none;
+    cursor: pointer;
 }
 
 textarea {
@@ -26,6 +27,10 @@ textarea {
     color: $gray-87;
 }
 
+.text-muted {
+    color: $gray-158!important;
+}
+
 .text-body {
     color: $yellow-236!important;
 }
@@ -38,14 +43,53 @@ textarea {
     background-color: $gray-123!important;
 }
 
-.fs-3 {
+.bg-dark {
+    background-color: $black-43!important;
+}
+
+.border-bottom {
+    --bs-border-color: #{$gray-87};
+}
+
+.object-fit-img {
+    object-fit: cover;
+}
+
+.mw-24 {
+    min-width: 1.5rem;
+    @include media-breakpoint-down(md) {
+        min-width: 1.313rem;
+    }
+}
+
+.fs-1 {
+    @include media-breakpoint-down(md) {
+        font-size: 5rem!important;
+    }
+}
+
+.fs-7 {
     @include media-breakpoint-down(md) {
         font-size: .875rem!important;
     }
 }
 
-.fs-5 {
+.fs-11 {
     @include media-breakpoint-down(md) {
         font-size: .75!important;
     }
+}
+
+.fs-13 {
+    @include media-breakpoint-down(md) {
+        font-size: .375!important;
+    }
+}
+
+.font-monospace-md {
+    letter-spacing: 2.5px;
+}
+
+.font-monospace-sm {
+    letter-spacing: 1.3px;
 }
