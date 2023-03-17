@@ -17078,6 +17078,11 @@ p {
     height: 20.438rem;
   }
 }
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .index.detail .detail-bg-main img {
+    height: 23.5rem;
+  }
+}
 @media (max-width: 767.98px) {
   .index.detail .detail-bg-main {
     top: -2.938rem;
