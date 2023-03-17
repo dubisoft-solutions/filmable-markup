@@ -17108,7 +17108,9 @@ p {
 }
 
 .main {
-  min-height: calc(83vh - 0px);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .landing-title {
