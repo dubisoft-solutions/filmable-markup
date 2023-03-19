@@ -14,8 +14,7 @@
         box-shadow: none;
     }
     &.contact {
-        $input-padding-y: 1.188rem;
-        $input-padding-y: 1rem;
+        padding: 1.188rem 1rem;
     }
 }
 
@@ -40,17 +39,6 @@
             top: .65rem;
             left: 3.125rem;
         }
-    }
-}
-
-.invalid-tooltip {
-    background-color: $red-253;
-    opacity: .95;
-    font-size: 1rem;
-    color: $white;
-    border-radius: .188rem;
-    @include media-breakpoint-down(md) {
-        font-size: .625rem;
     }
 }
 

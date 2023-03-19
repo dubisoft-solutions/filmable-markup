@@ -89,7 +89,7 @@
         background: $black-33;
         .detail-bg-main {
             position: absolute;
-            top: -3.938rem;
+            top: -.025rem;
             width: 100%;
             z-index: -2;
             background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #1A1A1A;
@@ -106,7 +106,7 @@
                 }
             }
             @include media-breakpoint-down(md) {
-                top: -2.938rem;
+                top: 0;
             }
         }
         .top-hero-decor {
@@ -146,7 +146,9 @@
 }
 
 .main {
-    min-height: calc(83vh - 0px);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .landing-title {
@@ -417,7 +419,7 @@
             .icon-style {
                 font-size: 3.125rem;
                 @include media-breakpoint-down(md) {
-                    font-size: 2.25rem;
+                    font-size: 2.813rem;
                 }
             }
             @include media-breakpoint-down(md) {

@@ -89,16 +89,20 @@ $(function() {
                     stagePadding: 80
                 },
                 414: {
-                    items: 3
+                    items: 3,
+                    stagePadding: 80
                 },
                 768: {
-                    items: 4
+                    items: 4,
+                    stagePadding: 80
                 },
                 992: {
-                    items: 5
+                    items: 5,
+                    stagePadding: 80
                 },
                 1200: {
-                    items: 6
+                    items: 6,
+                    stagePadding: 80
                 }
             }
         })

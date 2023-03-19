@@ -6,77 +6,76 @@
     <main>
         <!-- Header -->
         //= html_partials/header.html
-        <!-- Main section -->
-        <section class="main account">
-            <div class="container px-4 px-lg-0">
-                <div class="row mb-lg-5 mb-4">
-                    <div class="col-lg-6 col-12">
-                        <a href="account.html">
-                            <h5 class="mb-0 d-flex">
-                                <icon class="icon icon-prev pe-3 d-grid"></icon>Contact us
-                            </h5>
-                        </a>
+
+        <div class="main">
+            <!-- Main section -->
+            <div class="account">
+                <div class="container px-4 px-lg-0">
+                    <div class="row mb-lg-5 mb-4">
+                        <div class="col-lg-6 col-12">
+                            <a href="account.html">
+                                <h5 class="mb-0 d-flex">
+                                    <icon class="icon icon-prev pe-3 d-grid"></icon>Contact us
+                                </h5>
+                            </a>
+                        </div>
                     </div>
-                </div>
 
-                <div class="row justify-content-center">
-                    <div class="col-xl-8 col-lg-10 col-12">
-                        <p class="text-body fw-medium fs-9 mb-3">We are here for you! How can we help?</p>
-                        <form id="accountForm" class="row needs-validation" novalidate>
-                            <div class="col-lg-6 col-12 mb-3 text-start position-relative">
-                                <input type="email" class="form-control contact bg-dark" id="inputEmail" placeholder="Enter email: Example@playwing.com" required>
-                                <div class="invalid-tooltip w-100 p-3 mt-2">
-                                    Please enter a valid email
-                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    <div class="row justify-content-center">
+                        <div class="col-xl-8 col-lg-10 col-12">
+                            <p class="text-body fw-medium fs-9 mb-3">We are here for you! How can we help?</p>
+                            <form id="accountForm" class="row needs-validation" novalidate>
+                                <div class="col-lg-6 col-12 mb-3 text-start position-relative">
+                                    <input type="email" class="form-control contact bg-dark" id="inputEmail" placeholder="Enter email: Example@playwing.com" required>
                                 </div>
-                            </div>
 
-                            <div class="col-lg-6 col-12 col-lg-6 mb-4 text-start">
-                                <select class="selectpicker w-100" title="Select Issue">
-                                    <option>Freeze / Crash / Loading Issues</option>
-                                    <option>Questions / Feedback </option>
-                                    <option>Subcription / Unsubscription Issues</option>
-                                    <option>Videos are not working </option>
-                                    <option>Other</option>
-                                  </select>
-                            </div>
+                                <div class="col-lg-6 col-12 col-lg-6 mb-4 text-start">
+                                    <select class="selectpicker w-100" title="Select Issue">
+                                        <option>Freeze / Crash / Loading Issues</option>
+                                        <option>Questions / Feedback </option>
+                                        <option>Subcription / Unsubscription Issues</option>
+                                        <option>Videos are not working </option>
+                                        <option>Other</option>
+                                      </select>
+                                </div>
 
-                            <div class="col-lg-12 mb-4 text-start">
-                                <textarea class="form-control contact bg-dark" id="textareaMessage" rows="12" placeholder="Describe your issue here"></textarea>
-                            </div>
+                                <div class="col-lg-12 mb-4 text-start">
+                                    <textarea class="form-control contact bg-dark" id="textareaMessage" rows="12" placeholder="Describe your issue here"></textarea>
+                                </div>
 
-                            <div class="col-lg-6 col-12 py-2">
-                                <label for="textAttachment" class="form-label fw-medium fs-10 text-body mb-lg-4 mb-3">Attachment</label>
-                                <div class="d-flex align-items-center">
-                                    <div>
-                                        <button class="btn btn-dark btn-xs chose-attachment-file-btn">Choose files</button>
-                                    </div>
-                                    <div class="flex-grow-1">
-                                        <p class="text-muted ps-4 attachment-file-name fst-italic fs-12 text-truncate">No file chosen</p>
-                                        <input type="file" class="d-none" name="attachment-file" id="attachment-file-input">
+                                <div class="col-lg-6 col-12 py-2">
+                                    <label for="textAttachment" class="form-label fw-medium fs-10 text-body mb-lg-4 mb-3">Attachment</label>
+                                    <div class="d-flex align-items-center">
+                                        <div>
+                                            <button class="btn btn-dark btn-xs chose-attachment-file-btn">Choose files</button>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <p class="text-muted ps-4 attachment-file-name fst-italic fs-12 text-truncate">No file chosen</p>
+                                            <input type="file" class="d-none" name="attachment-file" id="attachment-file-input">
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="col-lg-6 col-12 text-center mx-auto my-5 d-grid">
-                                <button type="submit" class="btn btn-danger">Send</button>
-                            </div>
-                        </form>
-                        <div class="row justify-content-lg-center justify-content-start mb-lg-0 mb-4">
-                            <div class="col-lg-6 col-12 pb-lg-0 pb-5 text-start">
-                                <label for="inputUser" class="form-label fw-medium fs-10 text-body mb-3">User</label>
-                                <div class="card bg-dark text-center">
-                                    <a href="#" class="text-body fs-11">Wi-fi User not detected</a>
+                                <div class="col-lg-6 col-12 text-center mx-auto my-5 d-grid">
+                                    <button type="submit" class="btn btn-danger">Send</button>
+                                </div>
+                            </form>
+                            <div class="row justify-content-lg-center justify-content-start mb-lg-0 mb-4">
+                                <div class="col-lg-6 col-12 pb-lg-0 pb-5 text-start">
+                                    <label for="inputUser" class="form-label fw-medium fs-10 text-body mb-3">User</label>
+                                    <div class="card bg-dark text-center">
+                                        <a href="#" class="text-body fs-11">Wi-fi User not detected</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
 
-        <!-- Footer -->
-        //= html_partials/footer.html
+            <!-- Footer -->
+            //= html_partials/footer.html
+        </div>
     </main>
 </body>
 
