@@ -11,6 +11,7 @@ $(function() {
     initSelectPicker();
     initFormValidation();
     addScrolledClassToNavbarOnScroll();
+    setupSubscriptionFormAlerts();
 });
 
 function initSelectPicker() {
@@ -57,6 +58,49 @@ function validateSubscribeUsForm(event, form) {
 
     } else {
         form.classList.add('was-validated')
+        validatePhoneNumber(form);
+        validatePinCode(form);
+    }
+}
+
+function validatePhoneNumber(form) {
+    const phoneNumber = form.querySelector("#phoneNumber");
+    if (phoneNumber) {
+        const alert = form.querySelector(phoneNumber.dataset.alertId);
+        if (alert) {
+            alert.classList.toggle("d-none", phoneNumber.checkValidity());
+        }
+    }
+}
+
+function validatePinCode(form) {
+    const pinCode = form.querySelector("#pinCode");
+    if (pinCode) {
+        const pinInputs = pinCode.querySelectorAll('.pin-input');
+        let isValid = true;
+        pinInputs.forEach(pinInput => {
+            if (!pinInput.checkValidity()) {
+                isValid = false;
+            }
+        })
+        const alert = form.querySelector(pinCode.dataset.alertId);
+        if (alert) {
+            alert.classList.toggle("d-none", isValid);
+        }
+    }
+}
+
+function setupSubscriptionFormAlerts() {
+    const subscriptionForm = document.querySelector('#accountForm');
+    if (subscriptionForm) {
+        const alerts = subscriptionForm.querySelectorAll('.alert-dismissible');
+        alerts.forEach(alert => {
+            const closeButton = alert.querySelector('.btn-close');
+            closeButton.addEventListener('click', e => {
+                alert.classList.add('d-none');
+            })
+        });
+
     }
 }
 
