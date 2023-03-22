@@ -16092,6 +16092,20 @@ form .btn-close::before {
   }
 }
 
+.screenshoots .owl-stage {
+  padding-bottom: 1rem;
+}
+@media (max-width: 575.98px) {
+  .screenshoots .owl-stage {
+    padding-right: 0 !important;
+  }
+}
+@media (min-width: 992px) {
+  .screenshoots .owl-stage {
+    padding-right: 0 !important;
+  }
+}
+
 @keyframes bs-notify-fadeOut {
   0% {
     opacity: 0.9;
@@ -16747,7 +16761,7 @@ textarea {
 }
 
 .object-fit-img {
-  object-fit: cover;
+  object-fit: cover !important;
 }
 
 .mw-24 {
@@ -17265,13 +17279,13 @@ p {
 
 .img-lg {
   width: 100%;
-  max-height: 25.313rem;
+  height: 25.313rem;
   border-radius: 1.813rem;
   object-fit: contain;
 }
 @media (max-width: 767.98px) {
   .img-lg {
-    max-height: 19.875rem;
+    height: 19.875rem;
     border-radius: 1.375rem;
   }
 }
@@ -17327,7 +17341,7 @@ p {
 @media (max-width: 767.98px) {
   .info {
     right: 0.25rem;
-    bottom: 2.125rem;
+    bottom: 1.75rem;
   }
 }
 
@@ -17345,7 +17359,7 @@ p {
   .item-progress {
     border-radius: 0.313rem;
     padding: 0.625rem 0.375rem;
-    bottom: 0;
+    bottom: -0.25rem;
   }
 }
 
@@ -17455,19 +17469,14 @@ p {
   border-radius: 0.375rem;
 }
 
-.thank-you {
+.wrapper {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #060606;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-.thank-you main {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-.thank-you main .main-bg {
+.wrapper main .main-bg {
   position: relative;
 }
-.thank-you main .main-bg::before {
+.wrapper main .main-bg::before {
   width: 100%;
   height: 100%;
   content: "";
@@ -17481,47 +17490,63 @@ p {
   background-size: contain;
 }
 @media (min-width: 576px) {
-  .thank-you main .main-bg::before {
+  .wrapper main .main-bg::before {
     background-image: url("../img/thank-you-bg-desktop.png");
     background-size: cover;
   }
 }
-.thank-you main .check-block {
+.wrapper main .play-main-bg {
+  position: relative;
+}
+.wrapper main .play-main-bg::before {
+  width: 100%;
+  height: 22.313rem;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  background-image: url("../img/play-learn/play-learn-bg.png");
+  background-position: top center;
+  background-repeat: no-repeat;
+  z-index: -1;
+  background-size: contain;
+}
+.wrapper main .check-block {
   top: -3.125rem;
   right: 0;
   left: 0;
 }
-.thank-you main .check-circle {
+.wrapper main .check-circle {
   width: 7.938rem;
   height: 7.938rem;
   background-color: #FFFFEC;
 }
-.thank-you main .check-circle .icon-style {
+.wrapper main .check-circle .icon-style {
   font-size: 3.125rem;
 }
 @media (max-width: 767.98px) {
-  .thank-you main .check-circle .icon-style {
+  .wrapper main .check-circle .icon-style {
     font-size: 2.813rem;
   }
 }
 @media (max-width: 767.98px) {
-  .thank-you main .check-circle {
+  .wrapper main .check-circle {
     width: 5rem;
     height: 5rem;
   }
 }
-.thank-you .text-block {
+.wrapper .text-block {
   background: linear-gradient(-180deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
   border-radius: 41px;
   padding: 3.625rem 5rem 1.5rem 5rem;
 }
 @media (max-width: 767.98px) {
-  .thank-you .text-block {
+  .wrapper .text-block {
     background: transparent;
     padding: 0;
   }
 }
-.thank-you .pt-6 {
+.wrapper .pt-6 {
   padding-top: 8rem !important;
 }
 

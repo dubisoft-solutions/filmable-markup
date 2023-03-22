@@ -150,23 +150,23 @@ $(function() {
             responsive: {
                 0: {
                     items: 2,
-                    stagePadding: 80
+                    stagePadding: 46
                 },
-                414: {
+                576: {
                     items: 3,
-                    stagePadding: 80
+                    stagePadding: 10
                 },
                 768: {
                     items: 3,
-                    stagePadding: 80
+                    stagePadding: 10
                 },
                 992: {
                     items: 4,
-                    stagePadding: 80
+                    stagePadding: 10
                 },
                 1200: {
                     items: 5,
-                    stagePadding: 80
+                    stagePadding: 40
                 }
             }
         })
@@ -218,6 +218,39 @@ $(function() {
                 },
                 576: {
                     items: 1
+                }
+            }
+        })
+    }
+});
+
+$(function() {
+    if ($('.screenshoots .owl-carousel').length > 0) {
+        $('.screenshoots .owl-carousel').owlCarousel({
+            loop: true,
+            margin: 10,
+            responsiveClass: true,
+            autoplay: false,
+            autoplayTimeout: 3000,
+            nav: false,
+            dots: false,
+
+            responsive: {
+                0: {
+                    items: 1,
+                    stagePadding: 40
+                },
+                414: {
+                    items: 2,
+                    stagePadding: 80
+                },
+                768: {
+                    items: 3,
+                    stagePadding: 80
+                },
+                992: {
+                    items: 4,
+                    stagePadding: 80
                 }
             }
         })
