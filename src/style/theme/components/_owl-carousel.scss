@@ -43,3 +43,19 @@
         }
     }
 }
+
+.screenshoots {
+    .owl-stage {
+        padding-bottom: 1rem;
+    }
+    @include media-breakpoint-down(sm) {
+        .owl-stage {
+            padding-left: 0!important;
+        }
+    }
+    @include media-breakpoint-up(lg) {
+        .owl-stage {
+            padding-left: 0!important;
+        }
+    }
+}
