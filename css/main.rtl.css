@@ -17877,7 +17877,7 @@ p {
 .img-sm {
   width: 100%;
   max-height: 17.5rem;
-  object-fit: contain;
+  object-fit: cover;
 }
 @media (max-width: 767.98px) {
   .img-sm {
@@ -17925,7 +17925,7 @@ p {
 @media (max-width: 767.98px) {
   .info {
     right: 0.25rem;
-    bottom: 1.75rem;
+    bottom: 1.5rem;
   }
 }
 

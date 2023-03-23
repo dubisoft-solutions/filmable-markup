@@ -153,20 +153,20 @@ $(function() {
                     stagePadding: 46
                 },
                 576: {
-                    items: 3,
+                    items: 4,
                     stagePadding: 10
                 },
                 768: {
-                    items: 3,
-                    stagePadding: 10
-                },
-                992: {
                     items: 4,
                     stagePadding: 10
                 },
                 1200: {
                     items: 5,
-                    stagePadding: 40
+                    stagePadding: 46
+                },
+                1400: {
+                    items: 6,
+                    stagePadding: 10
                 }
             }
         })
