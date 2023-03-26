@@ -12,7 +12,7 @@ $(function() {
     initSelectPicker();
     initFormValidation();
     addScrolledClassToNavbarOnScroll();
-    setupSubscriptionFormAlerts();
+    initInputPinControl(".input-pin-control .pin-input");
 });
 
 function initSelectPicker() {
@@ -35,15 +35,16 @@ function initSelectPicker() {
 function initFormValidation() {
     const forms = document.querySelectorAll('.needs-validation')
     Array.from(forms).forEach(form => {
-        if (form.id == 'accountForm') {
-            form.addEventListener('submit', event => validateSubscribeUsForm(event, form));
+        if (form.classList.contains('alert-validation-form')) {
+            setupFormValidationAlerts(form);
+            form.addEventListener('submit', event => validateFormWithDismissibleAlerts(event, form));
         } else {
             form.addEventListener('submit', event => genericFormsValidation(event, form));
         }
     })
 }
 
-function validateSubscribeUsForm(event, form) {
+function validateFormWithDismissibleAlerts(event, form) {
     event.preventDefault()
     event.stopPropagation()
 
@@ -52,37 +53,27 @@ function validateSubscribeUsForm(event, form) {
 
         // cleanup the data
         form.reset();
-        form.classList.remove('was-validated')
+        form.classList.remove('was-validated');
 
-        var confirmationModal = new bootstrap.Modal(document.getElementById('requestAcceptedModal'))
-        confirmationModal.show();
-
+        const confirmationModal = new bootstrap.Modal(document.getElementById('requestAcceptedModal'));
+        if (confirmationModal) {
+            confirmationModal.show();
+        }
     } else {
         form.classList.add('was-validated')
-        validatePhoneNumber(form);
+        validateFormInputs(form);
         validatePinCode(form);
-        validateEmail(form);
     }
 }
 
-function validatePhoneNumber(form) {
-    const phoneNumber = form.querySelector("#phoneNumber");
-    if (phoneNumber) {
-        const alert = form.querySelector(phoneNumber.dataset.alertId);
+function validateFormInputs(form) {
+    const inputs = form.querySelectorAll("input.form-control,select,textarea");
+    inputs.forEach(input => {
+        const alert = form.querySelector(input.dataset.alertId);
         if (alert) {
-            alert.classList.toggle("d-none", phoneNumber.checkValidity());
+            alert.classList.toggle("make-visible", !input.checkValidity());
         }
-    }
-}
-
-function validateEmail(form) {
-    const inputEmail = form.querySelector("#inputEmail");
-    if (inputEmail) {
-        const alert = form.querySelector(inputEmail.dataset.alertId);
-        if (alert) {
-            alert.classList.toggle("d-none", inputEmail.checkValidity());
-        }
-    }
+    })
 }
 
 function validatePinCode(form) {
@@ -97,22 +88,20 @@ function validatePinCode(form) {
         })
         const alert = form.querySelector(pinCode.dataset.alertId);
         if (alert) {
-            alert.classList.toggle("d-none", isValid);
+            alert.classList.toggle("make-visible", !isValid);
         }
     }
 }
 
-function setupSubscriptionFormAlerts() {
-    const subscriptionForm = document.querySelector('#accountForm');
-    if (subscriptionForm) {
-        const alerts = subscriptionForm.querySelectorAll('.alert-dismissible');
+function setupFormValidationAlerts(form) {
+    if (form) {
+        const alerts = form.querySelectorAll('.alert-dismissible');
         alerts.forEach(alert => {
             const closeButton = alert.querySelector('.btn-close');
-            closeButton.addEventListener('click', e => {
-                alert.classList.add('d-none');
+            closeButton.addEventListener('click', () => {
+                alert.classList.remove('make-visible');
             })
         });
-
     }
 }
 
@@ -123,6 +112,42 @@ function genericFormsValidation(event, form) {
     }
 
     form.classList.add('was-validated')
+}
+
+
+function initInputPinControl(selector) {
+    const inputs = document.querySelectorAll(selector);
+
+    inputs.forEach((input, key) => {
+        input.addEventListener("click", function() {
+            let inputFocused = false;
+            for (let key = 0; key < inputs.length; key++) {
+                let input = inputs[key];
+                if (!input.value) {
+                    inputs[key].focus();
+                    inputFocused = true;
+                    break;
+                }
+            }
+            if (!inputFocused) {
+                inputs[inputs.length - 1].focus();
+            }
+        });
+        input.addEventListener("keydown", function(event) {
+            if (event.keyCode == 8) {
+                if (!input.value) {
+                    inputs[key - 1].focus();
+                }
+            }
+        })
+        input.addEventListener("keyup", function() {
+            if (input.value) {
+                if (key + 1 < inputs.length) {
+                    inputs[key + 1].focus();
+                }
+            }
+        });
+    });
 }
 
 /**
@@ -298,26 +323,26 @@ $(function() {
     });
 });
 
-/*
- DO NOT USER THIS CODE IN THE REAL PROJECT
- It handles ?rtl=true query param for testing rtl.
-*/
-$(function() {
-    const urlSearchParams = new URLSearchParams(window.location.search);
-    const params = Object.fromEntries(urlSearchParams.entries());
-    if (params.rtl == 'true') {
-        $('html').attr('lang', 'ar');
-        $('html').attr('dir', 'rtl');
+// /*
+//  DO NOT USER THIS CODE IN THE REAL PROJECT
+//  It handles ?rtl=true query param for testing rtl.
+// */
+// $(function() {
+//     const urlSearchParams = new URLSearchParams(window.location.search);
+//     const params = Object.fromEntries(urlSearchParams.entries());
+//     if (params.rtl == 'true') {
+//         $('html').attr('lang', 'ar');
+//         $('html').attr('dir', 'rtl');
 
-        $('link[rel=stylesheet]').each(function() {
-            console.log(this);
-            this.disabled = true;
-        });
+//         $('link[rel=stylesheet]').each(function() {
+//             console.log(this);
+//             this.disabled = true;
+//         });
 
-        $('head').append('<link rel="stylesheet" href="css/bootstrap.rtl.min.css">');
-        $('head').append('<link rel="stylesheet" href="css/style.css"></link>');
-    }
-});
+//         $('head').append('<link rel="stylesheet" href="css/bootstrap.rtl.min.css">');
+//         $('head').append('<link rel="stylesheet" href="css/style.css"></link>');
+//     }
+// });
 
 /**
  * Search controller
@@ -358,52 +383,3 @@ $(function() {
 });
 
 
-/**
- * Wifi PIN
- */
-const inputs = document.querySelectorAll(".input-pin-control .pin-input");
-const codeBlock = document.getElementById("code-block");
-const code = document.getElementById("code");
-const form = document.querySelector("accountForm");
-
-inputs.forEach((input, key) => {
-    input.addEventListener("click", function() {
-        let inputFocuced = false;
-        for (let key = 0; key < inputs.length; key++) {
-            let input = inputs[key];
-            if (!input.value) {
-                inputs[key].focus();
-                inputFocuced = true;
-                break;
-            }
-        }
-        if (!inputFocuced) {
-            inputs[inputs.length - 1].focus();
-        }
-    });
-    input.addEventListener("keydown", function(event) {
-        if (event.keyCode == 8) {
-            if (!input.value) {
-                inputs[key - 1].focus();
-            }
-        }
-    })
-    input.addEventListener("keyup", function(event) {
-        console.log(event.keyCode);
-        if (input.value) {
-            if (key === 3) {
-                const userCode = [...inputs].map((input) => input.value).join("");
-                codeBlock.classList.remove("hidden");
-                code.innerText = userCode;
-            } else {
-                inputs[key + 1].focus();
-            }
-        }
-    });
-});
-
-const reset = () => {
-    form.reset();
-    codeBlock.classList.add("hidden");
-    code.innerText = "";
-};

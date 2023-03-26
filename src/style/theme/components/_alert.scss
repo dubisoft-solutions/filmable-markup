@@ -16,6 +16,7 @@
 }
 
 .alert-dismissible {
+    display: none;
     padding-right: .5rem;
     .btn-close {
         padding: 1rem;
@@ -27,6 +28,16 @@
             @include media-breakpoint-down(md) {
                 font-size: .625rem;
             }
+        }
+    }
+
+    
+}
+
+.was-validated {
+    .alert-dismissible { 
+        &.make-visible {
+            display: block;
         }
     }
 }
