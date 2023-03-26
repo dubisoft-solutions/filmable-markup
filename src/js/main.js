@@ -61,6 +61,7 @@ function validateSubscribeUsForm(event, form) {
         form.classList.add('was-validated')
         validatePhoneNumber(form);
         validatePinCode(form);
+        validateEmail(form);
     }
 }
 
@@ -70,6 +71,16 @@ function validatePhoneNumber(form) {
         const alert = form.querySelector(phoneNumber.dataset.alertId);
         if (alert) {
             alert.classList.toggle("d-none", phoneNumber.checkValidity());
+        }
+    }
+}
+
+function validateEmail(form) {
+    const inputEmail = form.querySelector("#inputEmail");
+    if (inputEmail) {
+        const alert = form.querySelector(inputEmail.dataset.alertId);
+        if (alert) {
+            alert.classList.toggle("d-none", inputEmail.checkValidity());
         }
     }
 }
