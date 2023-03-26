@@ -46,7 +46,16 @@
             <!-- Main section -->
             <div class="hero mt-6 pb-4">
                 <div class="container-fluid px-0 mb-lg-3 mb-4">
-                    <img src="img/landing-img.gif" alt="Image" class="w-100 object-fit-img img-style">
+                    <div class="ratio ratio-16x9">
+                        <center>
+                            <video
+                                id="video-player"
+                                controls
+                                muted
+                                class="cld-video-player cld-video-player-skin-dark cld-fluid">
+                            </video>
+                        </center>
+                    </div>
                 </div>
                 <div class="container px-4 px-lg-0">
                     <div class="row align-items-center mb-lg-5 mb-0 pb-lg-3 pb-0">
@@ -62,7 +71,7 @@
                                 </ul>
                                 <div class="d-flex align-items-center">
                                     <icon class="icon icon-recording text-white d-grid me-2"></icon>
-                                    <a href="detail-view.html" class="btn-link btn-xs fw-medium text-danger">Watch Trailer</a>
+                                    <a href="detail-view.html" class="btn-link btn-xs fw-medium text-danger">Watch Video</a>
                                 </div>
                             </div>
                             <h5 class="fs-6 mb-3">Overview</h5>
@@ -195,5 +204,10 @@
 
 <!-- do not use this file in prod. See the comments inside the file -->
 <script src="js/markup-controller.js"></script>
+
+<script>
+    var demoplayer = cloudinary.videoPlayer('video-player', { cloud_name: 'demo' });
+    demoplayer.source('race_road_car')
+</script>
 
 </html>
