@@ -2,6 +2,7 @@
 //= ../../node_modules/jquery/dist/jquery.slim.min.js
 //= ../../node_modules/bootstrap-select/dist/js/bootstrap-select.min.js
 //= ../../node_modules/owl.carousel/dist/owl.carousel.min.js
+//= ../../node_modules/cloudinary-video-player/dist/cld-video-player.min.js
 
 
 //= https://www.google.com/recaptcha/api.js
