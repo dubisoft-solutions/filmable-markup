@@ -59,23 +59,27 @@
                     <div class="row justify-content-center">
                         <div class="col-xl-8 col-lg-10 col-12">
                             <p class="text-body fw-medium fs-9 mb-3">We are here for you! How can we help?</p>
-                            <form id="accountForm" class="row needs-validation" novalidate>
+                            <form id="contactUsForm" class="row needs-validation alert-validation-form" novalidate>
                                 <div class="col-lg-6 col-12 mb-3 text-start position-relative">
                                     <input type="email" class="form-control contact bg-dark" id="inputEmail" data-alert-id="#emailAlert" placeholder="Enter email: Example@playwing.com" required>
-                                    <div class="alert alert-danger alert-dismissible fade show d-none mt-2" role="alert" id="emailAlert">
+                                    <div class="alert alert-danger alert-dismissible fade show mt-2" role="alert" id="emailAlert">
                                         Please enter a valid email *
                                         <button type="button" class="btn-close" aria-label="Close" data-hide="alert"></button>
                                     </div>
                                 </div>
 
                                 <div class="col-lg-6 col-12 col-lg-6 mb-4 text-start">
-                                    <select class="selectpicker w-100" title="Select Issue">
+                                    <select class="selectpicker w-100" title="Select Issue" required data-alert-id="#issueTypeAlert">
                                         <option>Freeze / Crash / Loading Issues</option>
                                         <option>Questions / Feedback </option>
-                                        <option>Subcription / Unsubscription Issues</option>
+                                        <option>Subscription / Unsubscription Issues</option>
                                         <option>Videos are not working </option>
                                         <option>Other</option>
-                                      </select>
+                                    </select>
+                                    <div class="alert alert-danger alert-dismissible fade show mt-2" role="alert" id="issueTypeAlert">
+                                        Please select the issue type *
+                                        <button type="button" class="btn-close" aria-label="Close" data-hide="alert"></button>
+                                    </div>
                                 </div>
 
                                 <div class="col-lg-12 mb-4 text-start">
