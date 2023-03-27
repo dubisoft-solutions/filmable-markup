@@ -30,19 +30,17 @@
             }
         }
     }
-
-    
 }
 
 .was-validated {
-    .alert-dismissible { 
+    .alert-dismissible {
         &.make-visible {
             display: block;
         }
     }
 }
 
-#accountForm {
+.alert-validation-form {
     .alert-danger {
         background: #FD5732;
         opacity: 0.95;
