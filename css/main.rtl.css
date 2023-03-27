@@ -21545,6 +21545,19 @@ p {
     bottom: 0;
   }
 }
+.index.detail .card {
+  --bs-card-bg: transparent;
+  --bs-card-border-radius: 0;
+  padding: 0;
+  border: none;
+}
+.index.detail .card .card-img-overlay {
+  --bs-card-img-overlay-padding: 0;
+}
+.index.detail .card .card-footer {
+  position: absolute;
+  bottom: 0;
+}
 
 .main {
   display: flex;
