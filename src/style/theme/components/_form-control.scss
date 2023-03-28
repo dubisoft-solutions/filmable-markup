@@ -133,3 +133,21 @@ form {
         border: 0;
     }
 }
+
+.invalid-tooltip {
+    padding: .938rem 1.5rem;
+    background-color: $red-253;
+    color: $white;
+    font-size: .875rem;
+    border-radius: .188rem;
+    margin-top: .438rem;
+    @include media-breakpoint-down(md) {
+        font-size: .625rem;
+    }
+}
+
+.form-control.contact.is-invalid,
+.was-validated .form-control.contact:invalid {
+    border: 2px solid $red-242;
+    padding: 1.063rem 1rem;
+}
