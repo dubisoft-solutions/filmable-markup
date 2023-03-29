@@ -16242,6 +16242,9 @@ form .btn-close::before {
   font-size: 0.875rem;
   border-radius: 0.188rem;
   margin-top: 0.438rem;
+  top: initial;
+  bottom: calc(100% + 0.75rem);
+  right: 0;
 }
 @media (max-width: 767.98px) {
   .invalid-tooltip {
