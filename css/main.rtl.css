@@ -16235,6 +16235,26 @@ form .btn-close::before {
   border: 0;
 }
 
+.invalid-tooltip {
+  padding: 0.938rem 1.5rem;
+  background-color: #FD5732;
+  color: #FFFFFF;
+  font-size: 0.875rem;
+  border-radius: 0.188rem;
+  margin-top: 0.438rem;
+}
+@media (max-width: 767.98px) {
+  .invalid-tooltip {
+    font-size: 0.625rem;
+  }
+}
+
+.form-control.contact.is-invalid,
+.was-validated .form-control.contact:invalid {
+  border: 2px solid #F25531;
+  padding: 1.063rem 1rem;
+}
+
 .navbar {
   --navbar-height: 4.25rem;
   background: transparent;
