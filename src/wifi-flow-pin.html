@@ -28,18 +28,19 @@
                             <div class="col-lg-7 col-11 text-center mb-4">
                                 <label for="inputPinLabel" class="form-label font-family-second fw-bold text-white mb-4">Enter PIN</label>
 
-                                <div class="d-flex justify-content-center align-items-center">
+                                <div class="d-flex justify-content-center align-items-center position-relative">
                                     <span class="me-2"><icon class="icon icon-key text-white"></icon></span>
                                     <div class="input-pin-control d-flex" id="validationTooltipPinCode" aria-describedby="validationTooltipPinCodePrepend">
                                         <input type="password" maxlength=1 class="pin-input" required />
                                         <input type="password" maxlength=1 class="pin-input" required />
                                         <input type="password" maxlength=1 class="pin-input" required />
                                         <input type="password" maxlength=1 class="pin-input" required />
+                                        <div class="invalid-tooltip">
+                                            PIN does not match, please enter the PIN received by SMS or press re-send SMS with PIN* (below)
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="invalid-tooltip">
-                                    PIN does not match, please enter the PIN received by SMS or press re-send SMS with PIN* (below)
-                                </div>
+                                
                             </div>
                             <div class="col-lg-7 col-11 d-grid text-center">
                                 <button type="submit" class="btn btn-xs bg-gradient-gray mb-2">SUBSCRIBE</button>
