@@ -125,9 +125,11 @@ function initInputPinControl(selector) {
                 inputs[i].value = paste[i];
                 i++;
             }
-            
-            if  (i > 1) {
-                inputs[i - 1].focus();
+
+            if  (i < inputs.length) {
+                inputs[i].focus();
+            } else {
+                inputs[inputs.length - 1].focus();
             }
         });
     })
