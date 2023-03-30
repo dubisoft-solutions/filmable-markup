@@ -16244,7 +16244,7 @@ form .btn-close::before {
   margin-top: 0.438rem;
   top: initial;
   bottom: calc(100% + 0.75rem);
-  right: 0;
+  right: calc(var(--bs-gutter-x) * 0.5);
 }
 @media (max-width: 767.98px) {
   .invalid-tooltip {
@@ -16553,21 +16553,6 @@ form .btn-close::before {
 
 .was-validated .alert-dismissible.make-visible {
   display: block;
-}
-
-.alert-validation-form .alert-danger {
-  background: #FD5732;
-  opacity: 0.95;
-  border-radius: 3px;
-  font-size: 0.625rem;
-}
-.alert-validation-form .alert-danger .btn-close {
-  padding: 0;
-  top: -0.5rem;
-  left: -0.375rem;
-}
-.alert-validation-form .alert-danger .btn-close:before {
-  font-size: 0.313rem;
 }
 
 .accordion-button {
@@ -21173,6 +21158,10 @@ textarea {
 
 .font-monospace-sm {
   letter-spacing: 1.3px;
+}
+
+.left-0 {
+  right: 0 !important;
 }
 
 p {

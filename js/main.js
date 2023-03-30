@@ -27,14 +27,11 @@ animateIn:!1},e.prototype.swap=function(){if(1===this.core.settings.items&&a.sup
 //# sourceMappingURL=cld-video-player.min.js.map
 
 
-/* PLEASE DO NOT COPY AND PASTE THIS CODE. */(function(){var w=window,C='___grecaptcha_cfg',cfg=w[C]=w[C]||{},N='grecaptcha';var gr=w[N]=w[N]||{};gr.ready=gr.ready||function(f){(cfg['fns']=cfg['fns']||[]).push(f);};w['__recaptcha_api']='https://www.google.com/recaptcha/api2/';(cfg['render']=cfg['render']||[]).push('onload');w['__google_recaptcha_client']=true;var d=document,po=d.createElement('script');po.type='text/javascript';po.async=true;po.src='https://www.gstatic.com/recaptcha/releases/vpEprwpCoBMgy-fvZET0Mz6L/recaptcha__en.js';po.crossOrigin='anonymous';po.integrity='sha384-jffSm4FBmQyLvL1V8BXFUBdZCFkPLi8N+X9NGYs2YKU4uUiYzy53t/3mlwj1fdwI';var e=d.querySelector('script[nonce]'),n=e&&(e['nonce']||e.getAttribute('nonce'));if(n){po.setAttribute('nonce',n);}var s=d.getElementsByTagName('script')[0];s.parentNode.insertBefore(po, s);})();
-
-
 $(function() {
     initSelectPicker();
     initFormValidation();
     addScrolledClassToNavbarOnScroll();
-    initInputPinControl(".input-pin-control .pin-input");
+    initInputPinControl(".input-pin-control");
 });
 
 function initSelectPicker() {
@@ -57,12 +54,7 @@ function initSelectPicker() {
 function initFormValidation() {
     const forms = document.querySelectorAll('.needs-validation')
     Array.from(forms).forEach(form => {
-        if (form.classList.contains('alert-validation-form')) {
-            setupFormValidationAlerts(form);
-            form.addEventListener('submit', event => validateFormWithDismissibleAlerts(event, form));
-        } else {
-            form.addEventListener('submit', event => genericFormsValidation(event, form));
-        }
+        form.addEventListener('submit', event => genericFormsValidation(event, form));
     })
 }
 
@@ -82,50 +74,10 @@ function validateFormWithDismissibleAlerts(event, form) {
             confirmationModal.show();
         }
     } else {
-        form.classList.add('was-validated')
-        validateFormInputs(form);
-        validatePinCode(form);
+        form.classList.add('was-validated');
     }
 }
 
-function validateFormInputs(form) {
-    const inputs = form.querySelectorAll("input.form-control,select,textarea");
-    inputs.forEach(input => {
-        const alert = form.querySelector(input.dataset.alertId);
-        if (alert) {
-            alert.classList.toggle("make-visible", !input.checkValidity());
-        }
-    })
-}
-
-function validatePinCode(form) {
-    const pinCode = form.querySelector("#pinCode");
-    if (pinCode) {
-        const pinInputs = pinCode.querySelectorAll('.pin-input');
-        let isValid = true;
-        pinInputs.forEach(pinInput => {
-            if (!pinInput.checkValidity()) {
-                isValid = false;
-            }
-        })
-        const alert = form.querySelector(pinCode.dataset.alertId);
-        if (alert) {
-            alert.classList.toggle("make-visible", !isValid);
-        }
-    }
-}
-
-function setupFormValidationAlerts(form) {
-    if (form) {
-        const alerts = form.querySelectorAll('.alert-dismissible');
-        alerts.forEach(alert => {
-            const closeButton = alert.querySelector('.btn-close');
-            closeButton.addEventListener('click', () => {
-                alert.classList.remove('make-visible');
-            })
-        });
-    }
-}
 
 function genericFormsValidation(event, form) {
     if (!form.checkValidity()) {
@@ -138,38 +90,69 @@ function genericFormsValidation(event, form) {
 
 
 function initInputPinControl(selector) {
-    const inputs = document.querySelectorAll(selector);
+    const inputPinControls = document.querySelectorAll(selector);
+    inputPinControls.forEach(pinControl => {
+        const inputs = pinControl.querySelectorAll('.pin-input');
+        let focusedIndex = -1;
 
-    inputs.forEach((input, key) => {
-        input.addEventListener("click", function() {
-            let inputFocused = false;
-            for (let key = 0; key < inputs.length; key++) {
-                let input = inputs[key];
-                if (!input.value) {
-                    inputs[key].focus();
-                    inputFocused = true;
-                    break;
+        inputs.forEach((input, key) => {
+            input.addEventListener("paste", (event) => {
+                event.preventDefault();
+            });
+
+            input.addEventListener("click", function() {
+                let inputFocused = false;
+                for (let key = 0; key < inputs.length; key++) {
+                    let input = inputs[key];
+                    if (!input.value) {
+                        inputs[key].focus();
+                        focusedIndex = key;
+                        inputFocused = true;
+                        break;
+                    }
                 }
+                if (!inputFocused) {
+                    inputs[inputs.length - 1].focus();
+                    focusedIndex = inputs.length - 1;
+                }
+            });
+            input.addEventListener("keydown", function(event) {
+                if (event.keyCode == 8) {
+                    if (!input.value && key > 0) {
+                        inputs[key - 1].focus();
+                        focusedIndex = key - 1;
+                    }
+                }
+            })
+            input.addEventListener("keyup", function() {
+                if (input.value) {
+                    if (key + 1 < inputs.length) {
+                        inputs[key + 1].focus();
+                        focusedIndex = key + 1;
+                    }
+                }
+            });
+        });
+
+        pinControl.addEventListener("paste", (event) => {
+            let paste = (event.clipboardData || window.clipboardData).getData("text");
+            if (paste.length == 0) return;
+
+            if (focusedIndex == -1) {
+                focusedIndex = 0;
             }
-            if (!inputFocused) {
-                inputs[inputs.length - 1].focus();
+
+            let i = focusedIndex;
+            while(i < inputs.length && i < paste.length) {
+                inputs[i].value = paste[i];
+                i++;
+            }
+            
+            if  (i > 1) {
+                inputs[i - 1].focus();
             }
         });
-        input.addEventListener("keydown", function(event) {
-            if (event.keyCode == 8) {
-                if (!input.value) {
-                    inputs[key - 1].focus();
-                }
-            }
-        })
-        input.addEventListener("keyup", function() {
-            if (input.value) {
-                if (key + 1 < inputs.length) {
-                    inputs[key + 1].focus();
-                }
-            }
-        });
-    });
+    })
 }
 
 /**
@@ -344,27 +327,6 @@ $(function() {
         navbar.classList.remove('menu-visible')
     });
 });
-
-// /*
-//  DO NOT USER THIS CODE IN THE REAL PROJECT
-//  It handles ?rtl=true query param for testing rtl.
-// */
-// $(function() {
-//     const urlSearchParams = new URLSearchParams(window.location.search);
-//     const params = Object.fromEntries(urlSearchParams.entries());
-//     if (params.rtl == 'true') {
-//         $('html').attr('lang', 'ar');
-//         $('html').attr('dir', 'rtl');
-
-//         $('link[rel=stylesheet]').each(function() {
-//             console.log(this);
-//             this.disabled = true;
-//         });
-
-//         $('head').append('<link rel="stylesheet" href="css/bootstrap.rtl.min.css">');
-//         $('head').append('<link rel="stylesheet" href="css/style.css"></link>');
-//     }
-// });
 
 /**
  * Search controller
