@@ -16551,10 +16551,6 @@ form .btn-close::before {
   }
 }
 
-.was-validated .alert-dismissible.make-visible {
-  display: block;
-}
-
 .accordion-button {
   font-weight: 500;
   font-size: 1.25rem;
