@@ -26,6 +26,12 @@
             bottom: 1rem;
         }
     }
+
+    /*rtl:ignore*/
+    &.owl-rtl {
+         /*rtl:ignore*/
+        direction: rtl !important;
+    }
 }
 
 .video {
