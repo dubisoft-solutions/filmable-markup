@@ -32,6 +32,7 @@ $(function() {
     initFormValidation();
     addScrolledClassToNavbarOnScroll();
     initInputPinControl(".input-pin-control");
+    carouselsSetup(document.documentElement.getAttribute("dir") == 'rtl');
 });
 
 function initSelectPicker() {
@@ -157,129 +158,138 @@ function initInputPinControl(selector) {
     })
 }
 
-/**
- * carousel setup
- */
-$(function() {
-    if ($('.video .owl-carousel').length > 0) {
-        $('.video .owl-carousel').owlCarousel({
-            loop: true,
-            margin: 10,
-            responsiveClass: true,
-            autoplay: false,
-            autoplayTimeout: 3000,
-            nav: false,
-            dots: false,
 
-            responsive: {
-                0: {
-                    items: 2,
-                    stagePadding: 46
-                },
-                576: {
-                    items: 4,
-                    stagePadding: 10
-                },
-                768: {
-                    items: 4,
-                    stagePadding: 10
-                },
-                1200: {
-                    items: 5,
-                    stagePadding: 46
-                },
-                1400: {
-                    items: 6,
-                    stagePadding: 10
+function carouselsSetup(userRtl) {
+    const rtl = !!userRtl;
+    console.log(rtl)
+    /**
+     * carousel setup
+     */
+    $(function() {
+        if ($('.video .owl-carousel').length > 0) {
+            $('.video .owl-carousel').owlCarousel({
+                loop: true,
+                rtl: rtl,
+                margin: 10,
+                responsiveClass: true,
+                autoplay: false,
+                autoplayTimeout: 3000,
+                nav: false,
+                dots: false,
+
+                responsive: {
+                    0: {
+                        items: 2,
+                        stagePadding: 46
+                    },
+                    576: {
+                        items: 4,
+                        stagePadding: 10
+                    },
+                    768: {
+                        items: 4,
+                        stagePadding: 10
+                    },
+                    1200: {
+                        items: 5,
+                        stagePadding: 46
+                    },
+                    1400: {
+                        items: 6,
+                        stagePadding: 10
+                    }
                 }
-            }
-        })
-    }
-});
+            })
+        }
+    });
 
-$(function() {
-    if ($('.video-detail .owl-carousel').length > 0) {
-        $('.video-detail .owl-carousel').owlCarousel({
-            loop: true,
-            margin: 10,
-            responsiveClass: true,
-            autoplay: false,
-            autoplayTimeout: 3000,
-            nav: false,
-            dots: false,
+    $(function() {
+        if ($('.video-detail .owl-carousel').length > 0) {
+            $('.video-detail .owl-carousel').owlCarousel({
+                loop: true,
+                rtl: rtl,
+                margin: 10,
+                responsiveClass: true,
+                autoplay: false,
+                autoplayTimeout: 3000,
+                nav: false,
+                dots: false,
 
-            responsive: {
-                0: {
-                    items: 2,
-                    stagePadding: 80
-                },
-                991: {
-                    items: 3
-                },
-                992: {
-                    items: 3
+                responsive: {
+                    0: {
+                        items: 2,
+                        stagePadding: 80
+                    },
+                    991: {
+                        items: 3
+                    },
+                    992: {
+                        items: 3
+                    }
                 }
-            }
-        })
-    }
-});
+            })
+        }
+    });
 
-$(function() {
-    if ($('.hero .owl-carousel').length > 0) {
-        $('.hero .owl-carousel').owlCarousel({
-            loop: true,
-            margin: 10,
-            responsiveClass: true,
-            autoplay: false,
-            autoplayTimeout: 3000,
-            nav: false,
-            dots: true,
+    $(function() {
+        if ($('.hero .owl-carousel').length > 0) {
+            $('.hero .owl-carousel').owlCarousel({
+                loop: true,
+                rtl: rtl,
+                margin: 10,
+                responsiveClass: true,
+                autoplay: false,
+                autoplayTimeout: 3000,
+                nav: false,
+                dots: true,
 
-            responsive: {
-                0: {
-                    items: 1,
-                    stagePadding: 25
-                },
-                576: {
-                    items: 1
+                responsive: {
+                    0: {
+                        items: 1,
+                        stagePadding: 25
+                    },
+                    576: {
+                        items: 1
+                    }
                 }
-            }
-        })
-    }
-});
+            })
+        }
+    });
 
-$(function() {
-    if ($('.screenshoots .owl-carousel').length > 0) {
-        $('.screenshoots .owl-carousel').owlCarousel({
-            loop: true,
-            margin: 10,
-            responsiveClass: true,
-            autoplay: false,
-            autoplayTimeout: 3000,
-            nav: false,
-            dots: false,
+    $(function() {
+        if ($('.screenshoots .owl-carousel').length > 0) {
+            $('.screenshoots .owl-carousel').owlCarousel({
+                loop: true,
+                margin: 10,
+                responsiveClass: true,
+                autoplay: false,
+                autoplayTimeout: 3000,
+                nav: false,
+                dots: false,
+                rtl: rtl,
 
-            responsive: {
-                0: {
-                    items: 1,
-                    stagePadding: 40
-                },
-                414: {
-                    items: 2,
-                    stagePadding: 80
-                },
-                768: {
-                    items: 3,
-                    stagePadding: 80
-                },
-                992: {
-                    items: 4,
-                    stagePadding: 80
+                responsive: {
+                    0: {
+                        items: 1,
+                        stagePadding: 40
+                    },
+                    414: {
+                        items: 2,
+                        stagePadding: 80
+                    },
+                    768: {
+                        items: 3,
+                        stagePadding: 80
+                    },
+                    992: {
+                        items: 4,
+                        stagePadding: 80
+                    }
                 }
-            }
-        })
-    }
-});
+            })
+        }
+    });
+}
 
 /**
  * navbar scrolled

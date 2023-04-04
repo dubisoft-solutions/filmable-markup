@@ -16642,8 +16642,10 @@ form .btn-close::before {
   }
 }
 
-.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel {
+}
 .owl-carousel .owl-nav button.owl-next,
+.owl-carousel .owl-nav button.owl-prev,
 .owl-carousel button.owl-dot {
   width: 0.875rem;
   height: 0.875rem;
@@ -16672,6 +16674,9 @@ form .btn-close::before {
   .owl-carousel .owl-dots {
     bottom: 1rem;
   }
+}
+.owl-carousel.owl-rtl {
+  direction: rtl !important;
 }
 
 .video .owl-stage {
