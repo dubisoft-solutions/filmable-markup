@@ -19,7 +19,7 @@
 }
 
 .form-label {
-    font-size: 1.063rem;
+    font-size: 1rem;
 }
 
 .input-group-text {
@@ -144,7 +144,6 @@ form {
     @include media-breakpoint-down(md) {
         font-size: .625rem;
     }
-
     top: initial;
     bottom: calc(100% + 0.75rem);
     left: calc(var(--bs-gutter-x) * .5);

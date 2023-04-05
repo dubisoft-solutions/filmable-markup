@@ -10,33 +10,47 @@
         <div class="main-bg">
             <div class="main">
                 <!-- Main section -->
-                <div class="hero mt-6">
+                <div class="hero mt-7 pt-5">
                     <div class="container px-4 px-lg-0">
                         <div class="row justify-content-center pb-lg-5 pb-5">
-                            <div class="col-lg-7 col-11 text-center pt-5 mt-4 pb-lg-5 pb-4">
-                                <select class="selectpicker white-select w-100" title="Select Country">
-                                    <option>Ukraine</option>
-                                    <option>Germany</option>
-                                    <option>Italy</option>
-                                    <option>Spain</option>
-                                    <option>Other</option>
-                                  </select>
-                            </div>
-                            <div class="col-lg-7 col-11 text-center pb-lg-5 pb-5 mb-4">
-                                <div class="input-group">
-                                    <span class="input-group-text divide">+34</span>
-                                    <input type="text" class="form-control" aria-label="Enter Phone number" placeholder="Enter Phone number">
-                                    <span class="input-group-text bg-secondary"><icon class="icon icon-next fs-9 text-white d-grid"></icon></span>
-                                </div>
-                            </div>
-                            <div class="col-lg-9 col-12 text-center mb-5 pb-5">
+                            <div class="col-lg-9 col-12 text-center pt-5 mt-5 pb-4">
                                 <h2 class="font-family-title text-uppercase text-center"><span class="landing-title">watch over <span class="text-gradient">50</span> top premium documentaries</span> <span class="d-lg-block d-inline landing-title fs-3 pt-lg-4 pt-0 mt-lg-4 mt-0">without ads or <span class="d-lg-block d-inline">in app purchases!</span></span>
                                 </h2>
                             </div>
 
-                            <div class="col-lg-12 text-center">
-                                <p class="font-family-second text-white fw-light mb-3">Country Detected: Spain</p>
-                                <a href="#" class="btn-link font-family-second text-white fw-light">Change my country</a>
+                            <div class="col-lg-7 col-11 pb-lg-5 pb-4">
+                                <label for="countryFormControlInput" class="form-label text-white fw-medium text-start">Select Country</label>
+                                <select class="selectpicker white-select w-100 text-center" title="Country...." id="countryFormControlInput">
+                                    <option>Spain</option>
+                                    <option>Poland</option>
+                                    <option>Estonia</option>
+                                    <option>Jordan</option>
+                                    <option>Other</option>
+                                  </select>
+                            </div>
+                            <div class="col-lg-7 col-11 pb-lg-5 pb-3">
+                                <label for="phoneNumberFormControlInput" class="form-label text-white fw-medium text-start">Enter your phone number:</label>
+                                <div class="input-group text-center">
+                                    <span class="input-group-text divide">+48</span>
+                                    <input type="text" id="phoneNumberFormControlInput" class="form-control" aria-label="Enter Phone number" placeholder="XXX XXX XXX">
+                                    <span class="input-group-text bg-secondary"><icon class="icon icon-next fs-9 text-white d-grid"></icon></span>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-7 col-11 d-grid text-center pb-4">
+                                <button type="submit" class="btn btn-xs bg-gradient-gray mb-2">CONTINUE</button>
+                                <p class="text-center fw-medium fs-7 text-gray">2.99 EUR/ Day</p>
+                            </div>
+
+                            <div class="col-lg-12 text-center pb-5">
+                                <p class="font-family-second text-white fw-light pb-1 mb-4">Mobile Operator: Orange</p>
+                                <a href="wifi-flow-operator.html" class="btn-link font-family-second text-white fw-light">Change my Mobile Operator</a>
+                            </div>
+
+                            <div class="col-lg-5 col-10 order-3 order-lg-1 align-self-center pb-lg-0 pb-4 px-0">
+                                <p class="text-white font-family-second fs-7 mb-3">Watch over 50 top premium documentaries ads free and without in-app purchaes!</p>
+                                <p class="text-white font-family-second fs-7 mb-3">The Cost will be added to you phone bill.</p>
+                                <p class="text-white font-family-second fs-7">You may cancel your subscription at any time from <a href="account.html" class="btn-link text-danger">“My Account”</a> section. </p>
                             </div>
                         </div>
                     </div>
