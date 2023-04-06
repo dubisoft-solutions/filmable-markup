@@ -76,7 +76,8 @@
         .dropdown-toggle.btn-light {
             background-color: $light;
             color: $black-14;
-            padding: .75rem 1.25rem;
+            padding: .685rem 1.25rem;
+            --bs-btn-line-height: 1.1;
             &::after {
                 color: $black-14;
             }
