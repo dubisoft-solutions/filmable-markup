@@ -21600,11 +21600,6 @@ p {
   min-height: 100vh;
 }
 
-.landing-title {
-  background: linear-gradient(-180deg, #FFFFEC 0%, rgba(240, 240, 240, 0) 202.5%, rgba(240, 240, 240, 0) 202.5%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
 .landing-title.fs-3 {
   font-size: 2.5rem;
 }
