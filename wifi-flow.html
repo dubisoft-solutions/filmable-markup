@@ -29,7 +29,7 @@
                 <!-- Main section -->
                 <div class="hero mt-7 pt-5">
                     <div class="container px-4 px-lg-0">
-                        <div class="row justify-content-center pb-lg-5 pb-5">
+                        <form id="accountForm" class="row justify-content-center pb-lg-5 pb-5 needs-validation" novalidate>
                             <div class="col-lg-9 col-12 text-center pt-5 mt-5">
                                 <h2 class="font-family-title text-uppercase text-center mb-4"><span class="landing-title">watch over <span class="text-gradient">50</span> top premium documentaries</span> <span class="d-lg-block d-inline landing-title fs-3 pt-lg-4 pt-0 mt-lg-4 mt-0">without ads or <span class="d-lg-block d-inline">in app purchases!</span></span>
                                 </h2>
@@ -39,7 +39,10 @@
                                 <label for="phoneNumberFormControlInput" class="form-label text-white fw-medium text-start">Enter your phone number:</label>
                                 <div class="input-group text-center">
                                     <span class="input-group-text divide">+48</span>
-                                    <input type="tel" id="phoneNumberFormControlInput" pattern="[0-9]*" class="form-control text-center" aria-label="Enter Phone number" placeholder="XXX XXX XXX">
+                                    <input type="text" id="phoneNumberFormControlInput" class="form-control text-center rounded-end" aria-label="Enter Phone number" placeholder="XXX XXX XXX" required>
+                                    <div class="invalid-tooltip left-0 w-100">
+                                        Please enter a valid phone number *
+                                    </div>
                                 </div>
                             </div>
 
@@ -62,7 +65,7 @@
                                 <p class="text-white font-family-second fs-7 mb-3">The Cost will be added to you phone bill.</p>
                                 <p class="text-white font-family-second fs-7">You may cancel your subscription at any time from <a href="account.html" class="btn-link text-danger">“My Account”</a> section. </p>
                             </div>
-                        </div>
+                            </а>
                     </div>
                 </div>
 
