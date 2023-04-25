@@ -16200,6 +16200,7 @@ form .btn-close::before {
 .form-control.is-invalid,
 .was-validated .form-control:invalid {
   background-image: none;
+  padding: 0.813rem 1rem;
 }
 
 .form-control.is-valid,
